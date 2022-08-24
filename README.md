@@ -1,6 +1,8 @@
 ## Diagrams
 ```mermaid
 	erDiagram
+		SPAREPART --- ALTERNATIVE_NO : contains
+		SPAREPART --- SECTION : contains
 		SPAREPART {
 			int id
 			varchar(255) ftzNo
