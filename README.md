@@ -1,7 +1,7 @@
 ## Diagrams
 ```mermaid
 erDiagram
-	sparePart {
+	SPAREPART {
 		int id
 		varchar(255) ftzNo
 		varchar(255) name
@@ -14,13 +14,13 @@ erDiagram
 		varchar img
 	}
 
-	alternativeNo {
+	ALTERNATIVE_NO {
 		int id
 		varchar(255) ftzNo
 		varchar(255) altNo
 	}
 
-	section {
+	SECTION {
 		int id
 		varchar(100) name
 	}
