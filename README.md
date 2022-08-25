@@ -7,7 +7,7 @@ Built on Svelte with SvelteKit, using PostgreSQL and C#, with ASP.NET Core, for 
 ```mermaid
 erDiagram
 SPAREPART ||--|{ ALTERNATIVE_NO : contains
-SPAREPART ||--|{ SECTION : contains
+SPAREPART ||--|{ ALTERNATIVE_SECTION_NAME : contains
 SPAREPART {
 	int id
 		varchar ftzNo
