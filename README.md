@@ -10,7 +10,7 @@ SPAREPART ||--|{ ALTERNATIVE_NO : contains
 SPAREPART ||--|{ ALTERNATIVE_SECTION_NAME : contains
 SPAREPART {
 	int id
-		varchar ftzNo
+		varchar ftzNo PK
 		varchar name
 		int amount
 		int criticalAmount
@@ -21,12 +21,12 @@ SPAREPART {
 		varchar img
 	}
 	ALTERNATIVE_NO {
-		int id
+		int id PK
 			varchar ftzNo FK
 			varchar altNo
 	}
 	ALTERNATIVE_SECTION_NAME {
-		int id
+		int id PK
 			int section FK
 			varchar name
 	}
