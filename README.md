@@ -15,9 +15,8 @@ SPAREPART {
 		int amount
 		int criticalAmount
 		int section
-		int shelf
-		int drawer
 		text description
+		text note
 		varchar img
 	}
 	ALTERNATIVE_NO {
@@ -29,6 +28,7 @@ SPAREPART {
 		int id PK
 			int section FK
 			varchar name
+			varchar note
 	}
 ```
 
