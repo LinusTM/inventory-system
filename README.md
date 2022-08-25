@@ -25,9 +25,9 @@ SPAREPART {
 			varchar ftzNo FK
 			varchar altNo
 	}
-	SECTION {
+	ALTERNATIVE_SECTION_NAME {
 		int id
-			int SECTION FK
+			int section FK
 			varchar name
 	}
 ```
