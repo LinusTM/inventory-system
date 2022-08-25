@@ -1,5 +1,9 @@
-## Documentation
-#### Entity Relations
+#Inventory system
+A project to help educators and students sort, track and get parts for various different vocational educations.
+Built on Svelte with SvelteKit, using PostgreSQL and C# for the backend.
+
+
+## Entity Relations
 ```mermaid
 erDiagram
 SPAREPART ||--|{ ALTERNATIVE_NO : contains
@@ -28,6 +32,6 @@ SPAREPART {
 ```
 
 
-#### Wireframe
+## Wireframe
 ![wireframe](./resources/wireframe.png)
 
