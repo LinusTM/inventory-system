@@ -1,4 +1,5 @@
-## Entity Relations
+##Documentation
+#### Entity Relations
 ```mermaid
 erDiagram
 SPAREPART ||--|{ ALTERNATIVE_NO : contains
@@ -25,4 +26,8 @@ SPAREPART {
 			varchar name
 	}
 ```
+
+
+#### Wireframe
+![wireframe](./resources/wireframe.png)
 
