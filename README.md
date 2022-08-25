@@ -1,4 +1,4 @@
-#Inventory system
+# Inventory system
 A project to help educators and students sort, track and get parts for various different vocational educations.
 Built on Svelte with SvelteKit, using PostgreSQL and C# for the backend.
 
