@@ -9,8 +9,8 @@ erDiagram
 SPAREPART ||--|{ ALTERNATIVE_NO : contains
 SPAREPART ||--|{ ALTERNATIVE_SECTION_NAME : contains
 SPAREPART {
-	int id
-		varchar ftzNo PK
+	int id PK
+		varchar ftzNo
 		varchar name
 		int amount
 		int criticalAmount
