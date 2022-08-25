@@ -10,11 +10,11 @@ SPAREPART ||--|{ ALTERNATIVE_NO : contains
 SPAREPART ||--|{ SECTION : contains
 SPAREPART {
 	int id
-		varchar ftzNo[FK]
+		varchar ftzNo(FK)
 		varchar name
 		int amount
 		int criticalAmount
-		int section[FK]
+		int section(FK)
 		int shelf
 		int drawer
 		text description
