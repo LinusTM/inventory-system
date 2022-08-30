@@ -8,9 +8,10 @@
 
 
 /* GENERAL TAGS */
-* {
-	margin: 0;
-	padding: 0;
+body, html {
+	margin: 0 auto;
+	padding: 0 auto;
+	overflow-x: hidden;
 }
 
 

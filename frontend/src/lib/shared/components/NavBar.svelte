@@ -4,8 +4,9 @@
 		{ label: 'SØG', href: '/' }
 	];
 
-	var education = 'brogramming';
+	var education = 'Automekaniker';
 </script>
+
 
 <div id="toolbar">
 	<a id="img" href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
@@ -17,6 +18,7 @@
 		{/each}
 	</div>
 </div>
+
 
 <style lang="scss">
 	#toolbar {
@@ -34,10 +36,9 @@
 
 		a {
 			text-decoration: none;
-			transition: all 0.2s ease;
+			transition: all 0.1s ease;
 			font-size: 1.3rem;
 			font-weight: 600;
-			font-style: italic;
 		}
 
 		a:hover {
@@ -67,6 +68,7 @@
 
 		p {
 			margin-left: 0;
+			font-weight: bold;
 		}
 	}
 </style>
