@@ -29,6 +29,7 @@
 <!-- Gets the width of the browser -->
 <svelte:window bind:innerWidth />
 
+<!-- Navigation bar -->
 <NavBar />
 
 <!-- Page content -->
