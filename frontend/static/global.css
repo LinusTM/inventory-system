@@ -1,0 +1,38 @@
+/* COLORS */
+:root {
+	--background: #fff;
+	--background-dark: #1d1d1d;
+	--text: #000;
+	--text-light: #fff;
+}
+
+
+/* GENERAL TAGS */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* LINKS */
+a:visited,
+a:link {
+	color: var(--text-light);
+	text-decoration: none;
+}
+
+a:visited:hover,
+a:hover {
+	border-bottom: 2px solid var(--text-light)
+}
+
+
+/* SHADOWS */
+.box-shadow {
+	box-shadow:
+		0 1px 1px rgba(0,0,0,0.12), 
+		0 2px 2px rgba(0,0,0,0.12), 
+		0 4px 4px rgba(0,0,0,0.12), 
+		0 8px 8px rgba(0,0,0,0.12);
+}
+
