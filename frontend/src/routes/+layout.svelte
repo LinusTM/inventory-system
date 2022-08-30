@@ -21,7 +21,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>
@@ -49,7 +49,6 @@
 		background-color: var(--background);
 		color: var(--text);
 		border-radius: 3px;
-		font-family: 'Open Sans', sans-serif;
 	}
 
 	/* FOOTER */
@@ -59,8 +58,11 @@
 		height: 100%;
 		padding: 1.5em;
 		font-size: 1rem;
-		font-family: 'Open Sans', sans-serif;
 		color: var(--text-light);
 		background-color: var(--background-dark);
+	}
+
+	:global(*) {
+		font-family: 'IBM Plex Sans', sans-serif;
 	}
 </style>

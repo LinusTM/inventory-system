@@ -20,7 +20,6 @@
 	#toolbar {
 		display: flex;
 		flex-direction: row;
-		grid-area: toolbar;
 		position: sticky;
 		width: 100%;
 		height: 4rem;
@@ -34,8 +33,13 @@
 		a {
 			text-decoration: none;
 			transition: all 0.2s ease;
-			font-family: 'Bebas Neue', cursive;
 			font-size: 1.3rem;
+			font-weight: 600;
+			font-style: italic;
+		}
+
+		a:hover {
+			border-bottom-width: 3px;
 		}
 
 		* {
@@ -48,8 +52,10 @@
 		}
 
 		img {
-			max-height: 2.8em;
-			margin-top: 4%;
+			max-height: 2.3em;
+			margin-top: 4.5%;
+			padding-right: 2px;
+			border-right: 2.5px solid #FFF;
 		}
 
 		#img {
