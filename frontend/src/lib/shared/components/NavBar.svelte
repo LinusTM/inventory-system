@@ -3,10 +3,13 @@
 		{ label: 'ADMIN', href: '/admin' },
 		{ label: 'SØG', href: '/' }
 	];
+
+	var education = 'brogramming';
 </script>
 
 <div id="toolbar">
 	<a id="img" href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
+	<p>{education}</p>
 	<span class="spacer" />
 	<div id="links">
 		{#each navItems as navItem}
@@ -16,7 +19,6 @@
 </div>
 
 <style lang="scss">
-
 	#toolbar {
 		display: flex;
 		flex-direction: row;
@@ -55,11 +57,16 @@
 			max-height: 2.3em;
 			margin-top: 4.5%;
 			padding-right: 2px;
-			border-right: 2.5px solid #FFF;
+			border-right: 2.5px solid #fff;
+			margin-right: 0;
 		}
 
 		#img {
 			border-bottom: none;
+		}
+
+		p {
+			margin-left: 0;
 		}
 	}
 </style>
