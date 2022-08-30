@@ -6,7 +6,7 @@
 </script>
 
 <div id="toolbar">
-	<a href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
+	<a id="img" href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
 	<span class="spacer" />
 	<div id="links">
 		{#each navItems as navItem}
@@ -16,6 +16,7 @@
 </div>
 
 <style lang="scss">
+
 	#toolbar {
 		display: flex;
 		flex-direction: row;
@@ -31,7 +32,6 @@
 			0 2px 8px hsla(0, 0%, 0%, 0.05);
 
 		a {
-			text-transform: lowercase;
 			text-decoration: none;
 			transition: all 0.2s ease;
 			font-family: 'Bebas Neue', cursive;
@@ -48,8 +48,12 @@
 		}
 
 		img {
-			max-height: 3.5em;
-			margin-top: 3%;
+			max-height: 2.8em;
+			margin-top: 4%;
+		}
+
+		#img {
+			border-bottom: none;
 		}
 	}
 </style>
