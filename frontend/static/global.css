@@ -27,6 +27,10 @@ a:hover {
 	border-bottom: 2px solid var(--text-light)
 }
 
+a svg {
+	vertical-align: text-bottom;
+}
+
 
 /* SHADOWS */
 .box-shadow {

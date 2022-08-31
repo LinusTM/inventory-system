@@ -6,11 +6,21 @@
 	];
 
 	var education = 'Automekaniker';
+	const mobileWidth = 796;
+
+	// Page size
+	$: innerWidth = 0;
 </script>
+
+
+<!-- Gets the width of the browser -->
+<svelte:window bind:innerWidth />
 
 <div>
 	<a id="img" href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
-	<p>{education}</p>
+	{#if mobileWidth < innerWidth}	
+		<p>{education}</p>
+	{/if}
 	<span />
 	{#each navItems as navItem}
 		{#if $page.url.pathname == navItem.href}
@@ -36,7 +46,7 @@
 			0 2px 8px hsla(0, 0%, 0%, 0.05);
 
 		* {
-			margin-right: 1em;
+			margin-right: 1.5em;
 			margin-left: 0.5em;
 		}
 	}
