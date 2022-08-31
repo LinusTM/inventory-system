@@ -32,39 +32,48 @@
 <svelte:window bind:innerWidth />
 
 <!-- Navigation bar -->
-<NavBar />
+<div id="container">
+	<NavBar />
 
-<!-- Page content -->
-<div id="content">
-	<slot />
+	<!-- Page content -->
+	<div id="content">
+		<slot />
+	</div>
+
+	<footer>
+		<h3>Kontakt</h3>
+		<p><i>Udviklere kan kontaktes ved</i></p>
+		<p>
+			<a href="mailto:emil148p@zbc.dk">
+				<Email />
+				emil148p@zbc.dk
+			</a>
+		</p>
+
+		<p>
+			<a href="mailto:linu0108@zbc.dk">
+				<Email />
+				linu0108@zbc.dk
+			</a>
+		</p>
+		<br />
+
+		<h3>Source koden kan findes her</h3>
+		<a href="https://github.com/LinusTM/inventory-system">
+			<Github />
+			github.com/LinusTM/inventory-system
+		</a>
+	</footer>
 </div>
 
-<footer>
-	<h3>Kontakt</h3>
-	<p><i>Udviklere kan kontaktes ved</i></p>
-	<p>
-		<a href="mailto:emil148p@zbc.dk">
-			<Email />
-			emil148p@zbc.dk
-		</a>
-	</p>
-
-	<p>
-		<a href="mailto:linu0108@zbc.dk">
-			<Email />
-			linu0108@zbc.dk
-		</a>
-	</p>
-	<br />
-
-	<h3>Source koden kan findes her</h3>
-	<a href="https://github.com/LinusTM/inventory-system">
-		<Github />
-		github.com/LinusTM/inventory-system
-	</a>
-</footer>
-
 <style lang="scss">
+	/* CONTAINER */
+	#container {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
 	/* CONTENT */
 	#content {
 		margin: 4rem 2rem 2rem 2rem;
@@ -73,6 +82,7 @@
 		background-color: var(--background);
 		color: var(--text);
 		border-radius: 3px;
+		flex: 1;
 	}
 
 	/* FOOTER */
