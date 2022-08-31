@@ -32,7 +32,7 @@
 
 		* {
 			margin-right: 1em;
-			margin-left: 1em;
+			margin-left: 0.5em;
 		}
 	}
 
@@ -44,7 +44,7 @@
 	}
 
 	a:hover {
-		border-bottom-width: 3px;
+		border-bottom-width: 2px;
 	}
 
 	span {
