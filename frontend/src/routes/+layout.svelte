@@ -41,7 +41,7 @@
 	<p>All rights reserved.</p>
 </footer>
 
-<style>
+<style lang="scss">
 	/* CONTENT */
 	#content {
 		margin: 8rem 2rem 2rem 2rem;

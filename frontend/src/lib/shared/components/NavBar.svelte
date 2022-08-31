@@ -7,21 +7,17 @@
 	var education = 'Automekaniker';
 </script>
 
-
-<div id="toolbar">
+<div>
 	<a id="img" href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
 	<p>{education}</p>
-	<span class="spacer" />
-	<div id="links">
-		{#each navItems as navItem}
-			<a href={navItem.href}>{navItem.label}</a>
-		{/each}
-	</div>
+	<span />
+	{#each navItems as navItem}
+		<a href={navItem.href}>{navItem.label}</a>
+	{/each}
 </div>
 
-
 <style lang="scss">
-	#toolbar {
+	div {
 		display: flex;
 		flex-direction: row;
 		position: sticky;
@@ -34,41 +30,41 @@
 		box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
 			0 2px 8px hsla(0, 0%, 0%, 0.05);
 
-		a {
-			text-decoration: none;
-			transition: all 0.1s ease;
-			font-size: 1.3rem;
-			font-weight: 600;
-		}
-
-		a:hover {
-			border-bottom-width: 3px;
-		}
-
 		* {
 			margin-right: 1em;
 			margin-left: 1em;
 		}
+	}
 
-		.spacer {
-			flex: 1 1 auto;
-		}
+	a {
+		text-decoration: none;
+		transition: all 0.1s ease;
+		font-size: 1.3rem;
+		font-weight: 600;
+	}
 
-		img {
-			max-height: 2.3em;
-			margin-top: 4.5%;
-			padding-right: 2px;
-			border-right: 2.5px solid #fff;
-			margin-right: 0;
-		}
+	a:hover {
+		border-bottom-width: 3px;
+	}
 
-		#img {
-			border-bottom: none;
-		}
+	span {
+		flex: 1 1 auto;
+	}
 
-		p {
-			margin-left: 0;
-			font-weight: bold;
-		}
+	img {
+		max-height: 2.3em;
+		margin-top: 4.5%;
+		padding-right: 2px;
+		border-right: 2.5px solid #fff;
+		margin-right: 0;
+	}
+
+	#img {
+		border-bottom: none;
+	}
+
+	p {
+		margin-left: 0;
+		font-weight: bold;
 	}
 </style>
