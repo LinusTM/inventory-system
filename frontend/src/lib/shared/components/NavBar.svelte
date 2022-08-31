@@ -1,4 +1,5 @@
 <script type="ts">
+	import { page } from '$app/stores';
 	const navItems = [
 		{ label: 'ADMIN', href: '/admin' },
 		{ label: 'SØG', href: '/' }
@@ -12,7 +13,11 @@
 	<p>{education}</p>
 	<span />
 	{#each navItems as navItem}
-		<a href={navItem.href}>{navItem.label}</a>
+		{#if $page.url.pathname == navItem.href}
+			<a id="selected" href={navItem.href}>{navItem.label}</a>
+		{:else}
+			<a href={navItem.href}>{navItem.label}</a>
+		{/if}
 	{/each}
 </div>
 
@@ -44,6 +49,11 @@
 	}
 
 	a:hover {
+		border-bottom-width: 2px;
+	}
+
+	#selected {
+		border-bottom-style: solid;
 		border-bottom-width: 2px;
 	}
 
