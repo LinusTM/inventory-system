@@ -58,7 +58,7 @@
 	<br />
 
 	<h3>Source koden kan findes her</h3>
-	<a href="github.com/LinusTM/inventory-system">
+	<a href="https://github.com/LinusTM/inventory-system">
 		<Github />
 		github.com/LinusTM/inventory-system
 	</a>
