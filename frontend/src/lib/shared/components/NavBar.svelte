@@ -6,21 +6,11 @@
 	];
 
 	var education = 'Automekaniker';
-	const mobileWidth = 796;
-
-	// Page size
-	$: innerWidth = 0;
 </script>
-
-
-<!-- Gets the width of the browser -->
-<svelte:window bind:innerWidth />
 
 <div>
 	<a id="img" href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
-	{#if mobileWidth < innerWidth}	
-		<p>{education}</p>
-	{/if}
+	<p id="education">{education}</p>
 	<span />
 	{#each navItems as navItem}
 		{#if $page.url.pathname == navItem.href}
@@ -32,6 +22,12 @@
 </div>
 
 <style lang="scss">
+	@media screen and (max-width: 796px) {
+		#education {
+			display: none;
+		}
+	}
+
 	div {
 		display: flex;
 		flex-direction: row;

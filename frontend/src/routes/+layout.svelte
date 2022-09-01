@@ -5,10 +5,6 @@
 	import Github from '$lib/shared/icons/Github.svelte';
 
 	const currentYear = new Date().getFullYear();
-	const mobileWidth = 796;
-
-	// Page size
-	$: innerWidth = 0;
 </script>
 
 <svelte:head>
@@ -27,9 +23,6 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
-
-<!-- Gets the width of the browser -->
-<svelte:window bind:innerWidth />
 
 <div id="container">
 	<!-- Navigation bar -->
@@ -76,6 +69,7 @@
 
 	/* CONTENT */
 	#content {
+		align-self: center;
 		margin: 4rem 2rem 2rem 2rem;
 		font-size: 1.2rem;
 		line-height: 1.9;
@@ -83,6 +77,24 @@
 		color: var(--text);
 		border-radius: 3px;
 		flex: 1;
+	}
+
+	@media screen and (max-width: 800px) {
+		#content {
+			width: 100%;
+		}
+	}
+
+	@media screen and (min-width: 801px) and (max-width: 1300px) {
+		#content {
+			width: 84%;
+		}
+	}
+
+	@media screen and (min-width: 1301px) {
+		#content {
+			width: 75%;
+		}
 	}
 
 	/* FOOTER */
