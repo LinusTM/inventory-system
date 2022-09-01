@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<h1>Tilføj ny reservedel</h1>
+<h1><span>Tilføj ny reservedel</span></h1>
 
 <div id="container">
 	<div id="names">
@@ -53,9 +53,7 @@
 </div>
 
 <style lang="scss">
-	h1 {
-		margin: 0;
-	}
+	@import '../../scss/text.scss';
 
 	#container {
 		display: grid;
@@ -71,10 +69,6 @@
 				'description'
 				'add_part'
 				'note';
-		}
-
-		h1 {
-			margin-left: 2rem;
 		}
 	}
 
@@ -110,7 +104,6 @@
 	#chosen_image + label:hover {
 		background-color: #3a3a3a;
 		cursor: pointer;
-		font-size: 10rem;
 	}
 
 	#names {
