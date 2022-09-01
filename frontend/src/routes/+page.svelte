@@ -39,6 +39,7 @@
  ];
 </script>
 
+		font-size: 10rem;
 <h1><span>Søg på reservedel</span></h1>
 
 <form id="form">
@@ -60,10 +61,6 @@
 
 <style lang="scss">
 	@import '../scss/text.scss';
-
-	#container {
-		margin-left: 2rem;
-	}
 
 	#result {
 		display: flex;

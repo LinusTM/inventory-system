@@ -60,7 +60,6 @@
 	}
 	@media screen and (max-width: 796px) {
 		#container {
-			margin-left: 4rem;
 			grid-template-rows: auto;
 			grid-template-columns: 100%;
 			grid-template-areas:
@@ -74,7 +73,6 @@
 
 	@media screen and (min-width: 797px) {
 		#container {
-			margin-left: 2rem;
 			grid-template-rows: 60% 30% 10%;
 			grid-template-columns: 50% 50%;
 			grid-template-areas:
