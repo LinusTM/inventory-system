@@ -1,4 +1,5 @@
 <script lang="ts">
+	let files: any;
 </script>
 
 <h1><span>Tilføj ny reservedel</span></h1>
@@ -8,16 +9,30 @@
 		<h2>Beskrivelse</h2>
 		<div id="ftz_number">
 			<label for="ftz_number_input">FTZ nummer</label><br />
-			<input type="text" id="ftz_number_input" /><br /><br />
+			<input type="text" id="ftz_number_input" />
 		</div>
 
 		<div id="alt_name">
 			<label for="ftz_number_input">Alternativt navn</label><br />
-			<input type="text" id="alt_name_input" /><br /><br />
+			<input type="text" id="alt_name_input" />
 		</div>
 
-		<input type="file" name="chosen_image" id="chosen_image" />
-		<label for="chosen_image">Tilføj billede</label>
+		<div id="description">
+			<label for="description_input">Beskrivelse af reservedel</label><br />
+			<textarea id="description_input" />
+		</div>
+
+		<div id="add_part">
+			<div id="image_select">
+				<input type="file" name="chosen_image" id="chosen_image" bind:files hidden/>
+				<label for="chosen_image">Tilføj billede</label>
+					{#if files && files[0]}
+						{files[0].name.replace(/(.{12})..+/, "$1…")}
+					{/if}
+			</div>
+		</div>
+
+		<button type="button">Tilføj reservedel til inventar!</button>
 	</div>
 
 	<div id="placement">
@@ -25,30 +40,24 @@
 		<div id="placement_box">
 			<div id="section">
 				<label for="section_input">Sektion</label><br />
-				<input type="text" id="alt_name_input" /><br /><br />
+				<input type="text" id="alt_name_input" />
 			</div>
 
 			<div id="name">
 				<label for="name_input">Evt. sektion navn</label><br />
-				<input type="text" id="alt_name_input" /><br /><br />
+				<input type="text" id="alt_name_input" />
 			</div>
 
 			<div id="note">
-				<label for="note_input">Note</label><br />
-				<input type="text" id="note_input" />
+				<label for="note_input">Note til placering</label><br />
+				<textarea id="description_input" />
+			</div>
+
+			<div id="amount">
+				<label for="amount_input">Mængde</label><br />
+				<input type="number" id="amount_input" /><br />
 			</div>
 		</div>
-	</div>
-
-	<div id="description">
-		<label for="description_input">Beskrivelse</label><br />
-		<input type="text" id="description_input" /><br /><br />
-	</div>
-
-	<div id="add_part">
-		<label for="amount_input">Mængde</label><br />
-		<input type="number" id="amount_input" /><br />
-		<button type="button">Tilføj</button>
 	</div>
 </div>
 
@@ -58,16 +67,17 @@
 	#container {
 		display: grid;
 	}
+
 	@media screen and (max-width: 796px) {
 		#container {
 			grid-template-rows: auto;
 			grid-template-columns: 100%;
 			grid-template-areas:
-				'placement'
-				'names'
-				'description'
-				'add_part'
-				'note';
+			'placement'
+			'names'
+			'description'
+			'add_part'
+			'note';
 		}
 	}
 
@@ -76,37 +86,34 @@
 			grid-template-rows: 60% 30% 10%;
 			grid-template-columns: 50% 50%;
 			grid-template-areas:
-				'names placement'
-				'description placement'
-				'add_part note';
+			'names placement'
+			'description placement'
+			'add_part note';
+		}
+
+		#placement {
+			margin-left: 8rem;
 		}
 	}
 
-	#chosen_image {
-		width: 0.1px;
-		height: 0.1px;
-		opacity: 0;
-		overflow: hidden;
-		position: absolute;
+	#image_select {
+		label {
+			background-color: var(--background-dark);
+			color: var(--text-light);
+			padding: 0.5rem;
+			font-weight: 600;
+			border-radius: 2px;
+			cursor: pointer;
+			padding: 1rem;
+		}
 	}
 
-	#chosen_image + label {
-		color: var(--text-light);
-		background-color: var(--background-dark);
-		display: inline-block;
-		padding: 0.25em 0.5em;
-		font-style: normal;
-	}
-
-	#chosen_image:focus + label,
-	#chosen_image + label:hover {
+	#image_select label:hover {
 		background-color: #3a3a3a;
-		cursor: pointer;
 	}
 
 	#names {
 		grid-area: names;
-		margin-bottom: 2em;
 	}
 
 	#placement {
@@ -123,6 +130,7 @@
 
 	#description {
 		grid-area: description;
+		margin-bottom: 1.8em;
 	}
 
 	#description input {
@@ -156,13 +164,19 @@
 	input {
 		border: none;
 		border-bottom: 2px solid #000;
+		margin-bottom: 2em;
 	}
 
 	button {
 		border: none;
 		background-color: var(--background-dark);
 		color: var(--text-light);
-		padding: 0.75em 1em;
+		border-radius: 2px;
+		font-style: italic;
+		font-weight: 600;
+		font-size: 1em;
+		margin-top: 2em;
+		padding: 1rem;
 	}
 
 	button:hover {

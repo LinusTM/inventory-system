@@ -42,8 +42,8 @@
 <h1><span>Søg på reservedel</span></h1>
 
 <form id="form">
-	<input type="search" id="query" name="q" placeholder="Query..." />
-	<button>Search</button>
+	<input type="search" id="query" name="q" placeholder="FTZ nummer eller lign." />
+	<button>Søg</button>
 </form>
 
 <div id="container">
@@ -83,9 +83,9 @@
 
 	form {
 		color: var(--text-light);
-		width: 30em;
-		height: 44px;
-		border-radius: 5px;
+		width: 32em;
+		height: 2.75em;
+		border-radius: 2px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;

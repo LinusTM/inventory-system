@@ -70,7 +70,7 @@
 	/* CONTENT */
 	#content {
 		align-self: center;
-		margin: 4rem 2rem 2rem 2rem;
+		margin: 4rem 2rem 6rem 2rem;
 		font-size: 1.2rem;
 		line-height: 1.9;
 		background-color: var(--background);
