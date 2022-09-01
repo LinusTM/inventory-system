@@ -3,6 +3,155 @@
 
 <h1>Tilføj ny reservedel</h1>
 
+<div id="container">
+	<div id="names">
+		<h2>Beskrivelse</h2>
+		<div id="ftz_number">
+			<label for="ftz_number_input">FTZ nummer</label><br>
+			<input type="text" id="ftz_number_input"><br><br>
+		</div>
+
+		<div id="alt_name">
+			<label for="ftz_number_input">Alternativt navn</label><br>
+			<input type="text" id="alt_name_input"><br><br>
+		</div>
+
+		<input type="file" name="chosen_image" id="chosen_image">
+		<label for="chosen_image">Tilføj billede</label>
+	</div>
+
+
+	<div id="placement">
+		<h2>Placering</h2>
+		<div id="placement_box">
+			<div id="section">
+				<label for="section_input">Sektion</label><br>
+				<input type="text" id="alt_name_input"><br><br>
+			</div>
+
+			<div id="name">
+				<label for="name_input">Evt. sektion navn</label><br>
+				<input type="text" id="alt_name_input"><br><br>
+			</div>
+
+			<div id="note">
+				<label for="note_input">Note</label><br>
+				<input type="text" id="note_input">
+			</div>
+		</div>
+	</div>
+
+	<div id="description">
+		<label for="description_input">Beskrivelse</label><br>
+		<input type="text" id="description_input"><br><br>
+	</div>
+
+	<div id="add_part">
+		<label for="amount_input">Mængde</label><br>
+		<input type="number" id="amount_input"><br>
+		<button type="button">Tilføj</button>
+	</div>
+</div>
+
 
 <style lang="scss">
+	#container {
+		display: grid;
+		grid-template-columns: 30% 40% 30%;
+		grid-template-areas:
+			"names names placement"
+			"description description placement"
+			"add_part . .";
+	}
+
+	#chosen_image {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+
+	}
+
+	#chosen_image + label {
+		color: var(--text-light);
+		background-color: var(--background-dark);
+		display: inline-block;
+		padding: 0.25em 0.5em;
+		font-style: normal;
+	}
+
+	#chosen_image:focus + label,
+	#chosen_image + label:hover {
+		background-color: #3a3a3a;
+		cursor: pointer;
+	}
+
+	#add_image {
+		grid-area: add_image;
+	}
+
+	#names {
+		grid-area: names;
+		margin-bottom: 2em;
+	}
+
+	#placement {
+		grid-area: placement;
+	}
+
+	#note_input {
+		border-bottom: 2px solid #000;
+		background-color: #f5f5f5;
+		height: 8em;
+		width: 98%;
+	}
+
+	#description {
+		grid-area: description;
+	}
+
+	#description input {
+		border-bottom: 2px solid #000;
+		background-color: #f5f5f5;
+		height: 10em;
+		width: 33em;
+	}
+
+	#add_part {
+		grid-area: add_part;
+		display: flex;
+		input,
+		button {
+			margin-left: 2em;
+		}
+	}
+
+	h2 {
+		font-style: italic;
+	}
+
+	label {
+		font-style: italic;
+	}
+
+	input {
+		border: none;
+		border-bottom: 2px solid #000;
+	}
+
+	button {
+		border: none;
+		background-color: var(--background-dark);
+		color: var(--text-light);
+		padding: 0.75em 1em;
+	}
+
+	button:hover {
+		background-color: #3a3a3a;
+		cursor: pointer;
+	}
+
 </style>
+
