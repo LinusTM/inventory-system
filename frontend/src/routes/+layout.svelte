@@ -87,9 +87,6 @@
 
 	/* FOOTER */
 	footer {
-		bottom: 0;
-		width: 100%;
-		height: 100%;
 		padding: 1.5em;
 		font-size: 1rem;
 		color: var(--text-light);
