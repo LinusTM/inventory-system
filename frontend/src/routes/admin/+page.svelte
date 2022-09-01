@@ -53,129 +53,129 @@
 </div>
 
 <style lang="scss">
- h1 {
-	 margin: 0;
- }
+	h1 {
+		margin: 0;
+	}
 
- #container {
-	 display: grid;
- }
+	#container {
+		display: grid;
+	}
+	@media screen and (max-width: 796px) {
+		#container {
+			margin-left: 4rem;
+			grid-template-rows: auto;
+			grid-template-columns: 100%;
+			grid-template-areas:
+				'placement'
+				'names'
+				'description'
+				'add_part'
+				'note';
+		}
 
- @media screen and (max-width: 800px) {
-	 #container {
-		 grid-template-columns: 47.5% 5% 47.5%;
-		 grid-template-areas:
-			 'names names placement'
-			 'description description placement'
-			 'add_part . .';
-	 }
- }
+		h1 {
+			margin-left: 2rem;
+		}
+	}
 
- @media screen and (min-width: 801px) and (max-width: 1300px) {
-	 #container {
-		 grid-template-columns: 45% 10% 45%;
-		 grid-template-areas:
-			 'names names placement'
-			 'description description placement'
-			 'add_part . .';
-	 }
- }
+	@media screen and (min-width: 797px) {
+		#container {
+			margin-left: 2rem;
+			grid-template-rows: 60% 30% 10%;
+			grid-template-columns: 50% 50%;
+			grid-template-areas:
+				'names placement'
+				'description placement'
+				'add_part note';
+		}
+	}
 
- @media screen and (min-width: 1301px) {
-	 #container {
-		 grid-template-columns: 42.5% 15% 42.5%;
-		 grid-template-areas:
-			 'names names placement'
-			 'description description placement'
-			 'add_part . .';
-	 }
- }
+	#chosen_image {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+	}
 
-	 #chosen_image {
-		 width: 0.1px;
-		 height: 0.1px;
-		 opacity: 0;
-		 overflow: hidden;
-		 position: absolute;
-		 z-index: -1;
-	 }
+	#chosen_image + label {
+		color: var(--text-light);
+		background-color: var(--background-dark);
+		display: inline-block;
+		padding: 0.25em 0.5em;
+		font-style: normal;
+	}
 
-	 #chosen_image + label {
-		 color: var(--text-light);
-		 background-color: var(--background-dark);
-		 display: inline-block;
-		 padding: 0.25em 0.5em;
-		 font-style: normal;
-	 }
+	#chosen_image:focus + label,
+	#chosen_image + label:hover {
+		background-color: #3a3a3a;
+		cursor: pointer;
+		font-size: 10rem;
+	}
 
-	 #chosen_image:focus + label,
-	 #chosen_image + label:hover {
-		 background-color: #3a3a3a;
-		 cursor: pointer;
-	 }
+	#names {
+		grid-area: names;
+		margin-bottom: 2em;
+	}
 
-	 #add_image {
-		 grid-area: add_image;
-	 }
+	#placement {
+		grid-area: placement;
+	}
 
-	 #names {
-		 grid-area: names;
-		 margin-bottom: 2em;
-	 }
+	#note_input {
+		grid-area: note;
+		border-bottom: 2px solid #000;
+		background-color: #f5f5f5;
+		height: 8em;
+		width: 50%;
+	}
 
-	 #placement {
-		 grid-area: placement;
-	 }
+	#description {
+		grid-area: description;
+	}
 
-	 #note_input {
-		 border-bottom: 2px solid #000;
-		 background-color: #f5f5f5;
-		 height: 8em;
-		 width: 98%;
-	 }
+	#description input {
+		border-bottom: 2px solid #000;
+		background-color: #f5f5f5;
+		height: 10em;
+		width: 50%;
+	}
 
-	 #description {
-		 grid-area: description;
-	 }
+	#add_part {
+		grid-area: add_part;
+		display: flex;
 
-	 #description input {
-		 border-bottom: 2px solid #000;
-		 background-color: #f5f5f5;
-		 height: 10em;
-		 width: 33em;
-	 }
+		input,
+		button {
+			margin-left: 2em;
+			height: 50px;
+			width: 100px;
+			font-size: 1rem;
+		}
+	}
 
-	 #add_part {
-		 grid-area: add_part;
-		 display: flex;
-		 input,
-		 button {
-			 margin-left: 2em;
-		 }
-	 }
+	h2 {
+		font-style: italic;
+	}
 
-	 h2 {
-		 font-style: italic;
-	 }
+	label {
+		font-style: italic;
+	}
 
-	 label {
-		 font-style: italic;
-	 }
+	input {
+		border: none;
+		border-bottom: 2px solid #000;
+	}
 
-	 input {
-		 border: none;
-		 border-bottom: 2px solid #000;
-	 }
+	button {
+		border: none;
+		background-color: var(--background-dark);
+		color: var(--text-light);
+		padding: 0.75em 1em;
+	}
 
-	 button {
-		 border: none;
-		 background-color: var(--background-dark);
-		 color: var(--text-light);
-		 padding: 0.75em 1em;
-	 }
-
-	 button:hover {
-		 background-color: #3a3a3a;
-		 cursor: pointer;
-	 }
+	button:hover {
+		background-color: #3a3a3a;
+		cursor: pointer;
+	}
 </style>
