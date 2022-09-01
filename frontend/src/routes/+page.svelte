@@ -2,24 +2,28 @@
 	const items = [
 		{
 			label: 'dill',
+			id: 'aaa1350',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			image: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Anethum_graveolens_001.JPG'
 		},
 		{
 			label: 'iceberg lettuce',
+			id: 'g177013',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			image: 'https://upload.wikimedia.org/wikipedia/commons/d/da/Iceberg_lettuce_in_SB.jpg'
 		},
 		{
 			label: 'lavender',
+			id: '',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			image: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Single_lavender_flower02.jpg'
 		},
 		{
 			label: 'dates',
+			id: '',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			image:
@@ -27,6 +31,7 @@
 		},
 		{
 			label: 'oats',
+			id: '',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 			image: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Avena_sativa_004.JPG'
@@ -43,7 +48,7 @@
 	<div id="result">
 		<img src={item.image} alt={item.label} />
 		<div>
-			<h3>1350aaaaaaaa - {item.label}</h3>
+			<h3>{item.id} - {item.label}</h3>
 			<p>{item.description}</p>
 		</div>
 	</div>
@@ -57,6 +62,7 @@
 		color: var(--text-light);
 		border-color: var(--text);
 		border-width: 3px;
+		box-shadow: 0px 12px 13px -16px rgba(0, 0, 0, 0.5);
 	}
 
 	img {
