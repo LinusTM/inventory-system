@@ -1,42 +1,42 @@
 <script lang="ts">
- const items = [
-	 {
-		 label: 'dill',
-		 id: 'aaa1350',
-		 description:
+	const items = [
+		{
+			label: 'dill',
+			id: 'aaa1350',
+			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		 image: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Anethum_graveolens_001.JPG'
-	 },
-	 {
-		 label: 'iceberg lettuce',
-		 id: 'g177013',
-		 description:
+			image: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Anethum_graveolens_001.JPG'
+		},
+		{
+			label: 'iceberg lettuce',
+			id: 'g177013',
+			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		 image: 'https://upload.wikimedia.org/wikipedia/commons/d/da/Iceberg_lettuce_in_SB.jpg'
-	 },
-	 {
-		 label: 'lavender',
-		 id: '',
-		 description:
+			image: 'https://upload.wikimedia.org/wikipedia/commons/d/da/Iceberg_lettuce_in_SB.jpg'
+		},
+		{
+			label: 'lavender',
+			id: '',
+			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		 image: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Single_lavender_flower02.jpg'
-	 },
-	 {
-		 label: 'dates',
-		 id: '',
-		 description:
+			image: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Single_lavender_flower02.jpg'
+		},
+		{
+			label: 'dates',
+			id: '',
+			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		 image:
+			image:
 				'https://upload.wikimedia.org/wikipedia/commons/3/38/Mazafati_dates_-_whole%2C_halved_and_seed.jpg'
-	 },
-	 {
-		 label: 'oats',
-		 id: '',
-		 description:
+		},
+		{
+			label: 'oats',
+			id: '',
+			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-		 image: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Avena_sativa_004.JPG'
-	 }
- ];
+			image: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Avena_sativa_004.JPG'
+		}
+	];
 </script>
 
 <h1><span>Søg på reservedel</span></h1>
