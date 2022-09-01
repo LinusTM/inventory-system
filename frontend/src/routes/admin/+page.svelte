@@ -4,24 +4,25 @@
 <h1>Tilføj ny reservedel</h1>
 
 <div id="container">
-	<div id="add_image">
-		<button type="button">Tilføj billede</button>
-	</div>
-
 	<div id="names">
+		<h2>Beskrivelse</h2>
 		<div id="ftz_number">
 			<label for="ftz_number_input">FTZ nummer</label><br>
-			<input type="text" id="ftz_number_input"><br>
+			<input type="text" id="ftz_number_input"><br><br>
 		</div>
 
 		<div id="alt_name">
 			<label for="ftz_number_input">Alternativt navn</label><br>
-			<input type="text" id="alt_name_input"><br>
+			<input type="text" id="alt_name_input"><br><br>
 		</div>
+
+		<input type="file" name="chosen_image" id="chosen_image">
+		<label for="chosen_image">Tilføj billede</label>
 	</div>
 
+
 	<div id="placement">
-		<h4>Placering</h4>
+		<h2>Placering</h2>
 		<div id="placement_box">
 			<div id="section">
 				<label for="section_input">Sektion</label><br>
@@ -42,7 +43,7 @@
 
 	<div id="description">
 		<label for="description_input">Beskrivelse</label><br>
-		<input type="text" id="description_input"><br>
+		<input type="text" id="description_input"><br><br>
 	</div>
 
 	<div id="add_part">
@@ -58,9 +59,33 @@
 		display: grid;
 		grid-template-columns: 30% 40% 30%;
 		grid-template-areas:
-			"add_image names placement"
+			"names names placement"
 			"description description placement"
 			"add_part . .";
+	}
+
+	#chosen_image {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+
+	}
+
+	#chosen_image + label {
+		color: var(--text-light);
+		background-color: var(--background-dark);
+		display: inline-block;
+		padding: 0.25em 0.5em;
+		font-style: normal;
+	}
+
+	#chosen_image:focus + label,
+	#chosen_image + label:hover {
+		background-color: #3a3a3a;
+		cursor: pointer;
 	}
 
 	#add_image {
@@ -69,19 +94,16 @@
 
 	#names {
 		grid-area: names;
+		margin-bottom: 2em;
 	}
 
 	#placement {
 		grid-area: placement;
 	}
 
-	#placement_box {
-		border: 2px solid #000;
-		padding: 1em;
-	}
-
 	#note_input {
-		border: 2px solid #000;
+		border-bottom: 2px solid #000;
+		background-color: #f5f5f5;
 		height: 8em;
 		width: 98%;
 	}
@@ -91,7 +113,8 @@
 	}
 
 	#description input {
-		border: 2px solid #000;
+		border-bottom: 2px solid #000;
+		background-color: #f5f5f5;
 		height: 10em;
 		width: 33em;
 	}
@@ -99,10 +122,14 @@
 	#add_part {
 		grid-area: add_part;
 		display: flex;
+		input,
+		button {
+			margin-left: 2em;
+		}
 	}
 
-	h4 {
-		margin-top: 0;
+	h2 {
+		font-style: italic;
 	}
 
 	label {
@@ -112,6 +139,18 @@
 	input {
 		border: none;
 		border-bottom: 2px solid #000;
+	}
+
+	button {
+		border: none;
+		background-color: var(--background-dark);
+		color: var(--text-light);
+		padding: 0.75em 1em;
+	}
+
+	button:hover {
+		background-color: #3a3a3a;
+		cursor: pointer;
 	}
 
 </style>
