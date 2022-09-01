@@ -39,7 +39,6 @@
  ];
 </script>
 
-		font-size: 10rem;
 <h1><span>Søg på reservedel</span></h1>
 
 <form id="form">
