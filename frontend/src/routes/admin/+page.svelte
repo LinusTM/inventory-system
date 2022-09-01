@@ -24,11 +24,11 @@
 
 		<div id="add_part">
 			<div id="image_select">
-				<input type="file" name="chosen_image" id="chosen_image" bind:files hidden/>
+				<input type="file" name="chosen_image" id="chosen_image" bind:files hidden />
 				<label for="chosen_image">Tilføj billede</label>
-					{#if files && files[0]}
-						{files[0].name.replace(/(.{12})..+/, "$1…")}
-					{/if}
+				{#if files && files[0]}
+					{files[0].name.replace(/(.{12})..+/, '$1…')}
+				{/if}
 			</div>
 		</div>
 
@@ -70,14 +70,15 @@
 
 	@media screen and (max-width: 796px) {
 		#container {
+			margin-left: 4em;
 			grid-template-rows: auto;
 			grid-template-columns: 100%;
 			grid-template-areas:
-			'placement'
-			'names'
-			'description'
-			'add_part'
-			'note';
+				'placement'
+				'names'
+				'description'
+				'add_part'
+				'note';
 		}
 	}
 
@@ -86,9 +87,9 @@
 			grid-template-rows: 60% 30% 10%;
 			grid-template-columns: 50% 50%;
 			grid-template-areas:
-			'names placement'
-			'description placement'
-			'add_part note';
+				'names placement'
+				'description placement'
+				'add_part note';
 		}
 
 		#placement {
