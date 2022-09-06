@@ -61,6 +61,10 @@
 <style lang="scss">
 	@import '../scss/text.scss';
 
+	#container {
+		margin: 0 5%;
+	}
+
 	#result {
 		display: flex;
 		margin-bottom: 1rem;
@@ -89,7 +93,6 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		margin-bottom: 1rem;
 		background-color: var(--background-dark);
 		margin: auto;
 		margin-bottom: 4.5em;
