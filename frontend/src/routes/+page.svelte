@@ -39,7 +39,7 @@
 	];
 </script>
 
-<h1><span>Søg på reservedel</span></h1>
+<h1>Søg på reservedel</h1>
 
 <form id="form">
 	<input type="search" id="query" name="q" placeholder="FTZ nummer eller lign." />
