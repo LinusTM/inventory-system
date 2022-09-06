@@ -83,7 +83,7 @@
 
 	form {
 		color: var(--text-light);
-		width: 32em;
+		width: 100%;
 		height: 2.75em;
 		border-radius: 2px;
 		display: flex;

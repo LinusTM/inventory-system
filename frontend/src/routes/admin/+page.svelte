@@ -22,17 +22,6 @@
 			<textarea id="description_input" />
 		</div>
 
-		<div id="add_part">
-			<div id="image_select">
-				<input type="file" name="chosen_image" id="chosen_image" bind:files hidden />
-				<label for="chosen_image">Tilføj billede</label>
-				{#if files && files[0]}
-					{files[0].name.replace(/(.{12})..+/, '$1…')}
-				{/if}
-			</div>
-		</div>
-
-		<button type="button">Tilføj reservedel til inventar!</button>
 	</div>
 
 	<div id="placement">
@@ -52,12 +41,26 @@
 				<label for="note_input">Note til placering</label><br />
 				<textarea id="description_input" />
 			</div>
+		</div>
+	</div>
 
-			<div id="amount">
-				<label for="amount_input">Mængde</label><br />
-				<input type="number" id="amount_input" /><br />
+	<div id="add_item">
+		<h2>Tilføj</h2>
+		<div id="amount">
+			<label for="amount_input">Mængde</label><br />
+			<input type="number" id="amount_input" /><br />
+		</div>
+
+		<div id="add_part">
+			<div id="image_select">
+				<input type="file" name="chosen_image" id="chosen_image" bind:files hidden />
+				<label for="chosen_image">Tilføj billede</label>
+				{#if files && files[0]}
+					{files[0].name.replace(/(.{12})..+/, '$1…')}
+				{/if}
 			</div>
 		</div>
+		<button type="button">Tilføj reservedel til inventar!</button>
 	</div>
 </div>
 
@@ -85,13 +88,13 @@
 	@media screen and (min-width: 797px) {
 		#container {
 			grid-template-rows: 60% 30% 10%;
-			grid-template-columns: 50% 50%;
+			grid-template-columns: 33 33% 33%;
 			grid-template-areas:
-				'names placement'
-				'description placement'
-				'add_part note';
+				'names placement add_item'
+				'description placement add_item'
+				'add_part note add_item';
 		}
-
+		#add_item,
 		#placement {
 			margin-left: 8rem;
 		}
@@ -144,6 +147,7 @@
 	#add_part {
 		grid-area: add_part;
 		display: flex;
+		margin-top: 1rem;
 
 		input,
 		button {
