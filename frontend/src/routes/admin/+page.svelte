@@ -21,7 +21,6 @@
 			<label for="description_input">Beskrivelse af reservedel</label><br />
 			<textarea id="description_input" />
 		</div>
-
 	</div>
 
 	<div id="placement">
@@ -69,10 +68,8 @@
 
 	#container {
 		display: grid;
-	}
 
-	@media screen and (max-width: 796px) {
-		#container {
+		@media screen and (max-width: 796px) {
 			margin-left: 4em;
 			grid-template-rows: auto;
 			grid-template-columns: 100%;

@@ -77,22 +77,16 @@
 		color: var(--text);
 		border-radius: 3px;
 		flex: 1;
-	}
 
-	@media screen and (max-width: 800px) {
-		#content {
+		@media screen and (max-width: 800px) {
 			width: 100%;
 		}
-	}
 
-	@media screen and (min-width: 801px) and (max-width: 1300px) {
-		#content {
+		@media screen and (min-width: 801px) and (max-width: 1300px) {
 			width: 84%;
 		}
-	}
 
-	@media screen and (min-width: 1301px) {
-		#content {
+		@media screen and (min-width: 1301px) {
 			width: 75%;
 		}
 	}
