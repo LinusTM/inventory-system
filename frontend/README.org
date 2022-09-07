@@ -1,9 +1,11 @@
-** Frontend
+* Frontend
 This is the frontend for the project, which is powered by Svelte, Typescript, and Sass.
 
 It includes a search page, and an admin page.
 
 ** Usage
+
+*** Using nix
 Easiest way to make sure that it all runs smoothly, is by using the nix shell, which will
 automatically fetch all the packages that are required to run the project.
 
