@@ -1,1 +1,19 @@
-#+title: Readme
+** Frontend
+This is the frontend for the project, which is powered by Svelte, Typescript, and Sass.
+
+It includes a search page, and an admin page.
+
+** Usage
+Easiest way to make sure that it all runs smoothly, is by using the nix shell, which will
+automatically fetch all the packages that are required to run the project.
+
+#+begin_src shell
+cd inventory-system/frontend
+nix-shell
+npm run install
+npm run dev
+#+end_src
+
+*** Alternative
+If you do not have access to nix, then you'll need to fetch the dependencies manually,
+and then run the npm commands afterwards.
