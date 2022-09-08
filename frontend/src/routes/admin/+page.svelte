@@ -72,7 +72,7 @@
 		#container {
 			grid-template-areas:
 				'placement'
-				'names'
+				'names';
 		}
 
 		#container > div {
@@ -86,8 +86,7 @@
 
 	@media screen and (min-width: 797px) {
 		#container {
-			grid-template-areas:
-				'names placement';
+			grid-template-areas: 'names placement';
 		}
 
 		#placement {
@@ -96,7 +95,7 @@
 
 		#names {
 			justify-self: end;
-			width: Min(98%, 25% + 200px)
+			width: Min(98%, 25% + 200px);
 		}
 	}
 
