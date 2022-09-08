@@ -61,7 +61,6 @@
 <style lang="scss">
 	@import '../scss/text.scss';
 
-	
 	#container {
 		@media screen and (max-width: 800px) {
 			margin: 0 5%;
@@ -123,4 +122,3 @@
 		opacity: 0.7;
 	}
 </style>
-

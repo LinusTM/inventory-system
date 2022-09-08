@@ -2,7 +2,7 @@
 	let files: any;
 </script>
 
-<h1><span>Tilføj ny reservedel</span></h1>
+<h1>Tilføj ny reservedel</h1>
 
 <div id="container">
 	<div id="names">
@@ -76,7 +76,7 @@
 		}
 
 		#container > div {
-			margin: 0 min(25%, 20% + 100px);
+			margin: 0 Min(25%, 20% + 100px);
 		}
 
 		#names h2 {
@@ -96,7 +96,7 @@
 
 		#names {
 			justify-self: end;
-			width: min(98%, 25% + 200px)
+			width: Min(98%, 25% + 200px)
 		}
 	}
 
