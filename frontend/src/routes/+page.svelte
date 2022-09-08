@@ -61,8 +61,11 @@
 <style lang="scss">
 	@import '../scss/text.scss';
 
+	
 	#container {
-		margin: 0 5%;
+		@media screen and (max-width: 800px) {
+			margin: 0 5%;
+		}
 	}
 
 	#result {
@@ -86,14 +89,15 @@
 	}
 
 	form {
-		color: var(--text-light);
+		color: var(--text);
 		width: 100%;
 		height: 2.75em;
 		border-radius: 2px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		background-color: var(--background-dark);
+		background-color: var(--background-medium);
+		border-bottom: 2px solid var(--text);
 		margin: auto;
 		margin-bottom: 4.5em;
 	}
@@ -110,7 +114,8 @@
 		cursor: pointer;
 		width: 44px;
 		height: 44px;
-		color: var(--text-light);
+		color: var(--text);
+		font-weight: bold;
 		padding-right: 1.2em;
 	}
 
@@ -118,3 +123,4 @@
 		opacity: 0.7;
 	}
 </style>
+
