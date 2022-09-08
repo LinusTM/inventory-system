@@ -24,15 +24,15 @@
 
 		<div id="add_part">
 			<div id="image_select">
-				<input type="file" name="chosen_image" id="chosen_image" bind:files hidden/>
+				<input type="file" name="chosen_image" id="chosen_image" bind:files hidden />
 				<label for="chosen_image">Tilføj billede</label>
-					{#if files && files[0]}
-						{files[0].name.replace(/(.{12})..+/, "$1…")}
-					{/if}
+				{#if files && files[0]}
+					{files[0].name.replace(/(.{12})..+/, '$1…')}
+				{/if}
 			</div>
 		</div>
 
-		<button type="button">Tilføj reservedel til inventar!</button>
+		<button type="button">Tilføj reservedel til inventar</button>
 	</div>
 
 	<div id="placement">
@@ -70,42 +70,44 @@
 
 	@media screen and (max-width: 796px) {
 		#container {
-			grid-template-rows: auto;
-			grid-template-columns: 100%;
 			grid-template-areas:
-			'placement'
-			'names'
-			'description'
-			'add_part'
-			'note';
+				'placement'
+				'names'
+		}
+
+		#container > div {
+			margin: 0 min(25%, 20% + 100px);
+		}
+
+		#names h2 {
+			padding-top: 3rem;
 		}
 	}
 
 	@media screen and (min-width: 797px) {
 		#container {
-			grid-template-rows: 60% 30% 10%;
-			grid-template-columns: 50% 50%;
 			grid-template-areas:
-			'names placement'
-			'description placement'
-			'add_part note';
+				'names placement';
 		}
 
 		#placement {
 			margin-left: 8rem;
 		}
+
+		#names {
+			justify-self: end;
+			width: min(98%, 25% + 200px)
+		}
 	}
 
-	#image_select {
-		label {
-			background-color: var(--background-dark);
-			color: var(--text-light);
-			padding: 0.5rem;
-			font-weight: 600;
-			border-radius: 2px;
-			cursor: pointer;
-			padding: 1rem;
-		}
+	#image_select label {
+		background-color: var(--background-dark);
+		color: var(--text-light);
+		padding: 0.5rem;
+		font-weight: 600;
+		border-radius: 2px;
+		cursor: pointer;
+		padding: 1rem;
 	}
 
 	#image_select label:hover {
@@ -116,20 +118,13 @@
 		grid-area: names;
 	}
 
-	#placement {
-		grid-area: placement;
-	}
-
 	#note_input {
-		grid-area: note;
 		border-bottom: 2px solid #000;
 		background-color: #f5f5f5;
 		height: 8em;
-		width: 50%;
 	}
 
 	#description {
-		grid-area: description;
 		margin-bottom: 1.8em;
 	}
 
@@ -137,11 +132,9 @@
 		border-bottom: 2px solid #000;
 		background-color: #f5f5f5;
 		height: 10em;
-		width: 50%;
 	}
 
 	#add_part {
-		grid-area: add_part;
 		display: flex;
 
 		input,
