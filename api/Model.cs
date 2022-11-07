@@ -11,15 +11,15 @@ public class BloggingContext : DbContext
 
     public BloggingContext()
     {
-        var folder = Environment.SpecialFolder.LocalApplicationData;
-        var path = Environment.GetFolderPath(folder);
-        DbPath = System.IO.Path.Join(path, "./blogging.db");
+        string workingDirectory = Environment.CurrentDirectory;
+        string projectDirectory = Directory.GetParent(workingDirectory).FullName;
+        DbPath = System.IO.Path.Join(projectDirectory, "database.db");
     }
 
-    // The following configures EF to create a Sqlite database file in the
+    // The following configures EF to create a MariaDB database file in the
     // special "local" folder for your platform.
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseMySql($"Data Source={DbPath}", new MySqlServerVersion(new Version(8, 0, 11)));
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseMySql("server=localhost;database=db_testing;user=root", new MariaDbServerVersion(new Version(10, 6, 10)));
 }
 
 public class Blog
