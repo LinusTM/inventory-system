@@ -1,0 +1,21 @@
+# Inventory system REST API
+
+## How to start
+
+### Initialize MariaDB
+
+I would recommend using the shell.nix file in the maria folder.
+The file will immediately create a database for you, if it hasn't already been created.
+
+Otherwise you may choose to create the database however you'd like.
+
+### Create the database
+
+At the moment, the REST API expects that the name of your database is "db_testing".
+You may create this database by connecting to it over cli, and then using the command "CREATE DATABASE db_testing;".
+
+If you are using the nix-shell, you may connect to the database by simply typing mariadb db_testing~.
+
+### Synchronize the database with the REST API
+
+Use the command "dotnet ef database update", afterwards you may choose to run the database, and it should figure it out.
