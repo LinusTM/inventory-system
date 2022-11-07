@@ -33,6 +33,7 @@
 		<slot />
 	</div>
 
+	<!-- Footer -->
 	<footer>
 		<h3>Kontakt</h3>
 		<p><i>Udviklere kan kontaktes ved</i></p>

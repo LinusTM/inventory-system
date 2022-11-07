@@ -1,4 +1,7 @@
 <script lang="ts">
+	import Up from '$lib/shared/icons/Up.svelte';
+	import Down from '$lib/shared/icons/Down.svelte';
+
 	const items = [
 		{
 			label: 'dill',
@@ -53,6 +56,10 @@
 			<div>
 				<h3>{item.id} - {item.label}</h3>
 				<p>{item.description}</p>
+				<div>
+					<button><Up /></button>
+					<button><Down /></button>
+				</div>
 			</div>
 		</div>
 	{/each}
