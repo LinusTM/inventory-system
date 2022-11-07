@@ -10,7 +10,7 @@ public class BloggingContext : DbContext
     public string DbPath { get; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql("server=localhost;database=db_testing;user=root", new MariaDbServerVersion(new Version(10, 6, 10)));
+        => optionsBuilder.UseMySql("server=localhost;database=db_testing;user=root", new MariaDbServerVersion(new Version(10, 9, 3)));
 }
 
 public class Blog

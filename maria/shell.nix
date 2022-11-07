@@ -1,7 +1,7 @@
 let pkgs = import <nixpkgs> { };
 in
 pkgs.mkShell {
-  buildInputs = [ pkgs.mariadb ];
+  buildInputs = [ pkgs.mariadb_109 ];
   shellHook = ''
     MYSQL_BASEDIR=${pkgs.mariadb}
     MYSQL_HOME=$PWD/mysql
