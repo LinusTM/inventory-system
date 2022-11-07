@@ -9,15 +9,6 @@ public class BloggingContext : DbContext
 
     public string DbPath { get; }
 
-    public BloggingContext()
-    {
-        string workingDirectory = Environment.CurrentDirectory;
-        string projectDirectory = Directory.GetParent(workingDirectory).FullName;
-        DbPath = System.IO.Path.Join(projectDirectory, "database.db");
-    }
-
-    // The following configures EF to create a MariaDB database file in the
-    // special "local" folder for your platform.
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseMySql("server=localhost;database=db_testing;user=root", new MariaDbServerVersion(new Version(10, 6, 10)));
 }
