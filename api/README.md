@@ -23,11 +23,11 @@ Otherwise you may choose to create the database however you'd like.
 
 ### create the database
 
-At the moment, the REST API expects that the name of your database is "db_testing".
-You may create this database by connecting to it over cli, and then using the command "CREATE DATABASE db_testing;".
+At the moment, the REST API expects that the name of your database is `db_testing`.
+You may create this database by connecting to it over cli, and then using the command `CREATE DATABASE db_testing;`.
 
 If you are using the nix-shell, you may connect to the database by simply typing `mariadb db_testing`.
 
 ### synchronize the database with the REST API
 
-Use the command "dotnet ef database update", afterwards you may choose to run the database, and it should figure it out.
+Use the command `dotnet ef database update`, afterwards you may choose to run the database, and it should figure it out.
