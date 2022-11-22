@@ -22,8 +22,8 @@
 </div>
 
 <style lang="scss">
-	@media screen and (max-width: 796px) {
-		#education {
+	#education {
+		@media screen and (max-width: 796px) {
 			display: none;
 		}
 	}

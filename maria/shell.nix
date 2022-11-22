@@ -4,7 +4,7 @@ pkgs.mkShell {
   buildInputs = [ pkgs.mariadb_109 ];
   shellHook = ''
     MYSQL_BASEDIR=${pkgs.mariadb}
-    MYSQL_HOME=$PWD/mysql
+    MYSQL_HOME=$PWD/mariadb
     MYSQL_DATADIR=$MYSQL_HOME/data
     export MYSQL_UNIX_PORT=$MYSQL_HOME/mysql.sock
     MYSQL_PID_FILE=$MYSQL_HOME/mysql.pid

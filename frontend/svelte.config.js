@@ -10,9 +10,9 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-    scss: {
-        includePaths: ['./src/scss']
-    }
+	scss: {
+		includePaths: ['./src/scss']
+	}
 };
 
 export default config;
