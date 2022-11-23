@@ -6,11 +6,9 @@
 **/inventory**
 
 ### Get:
-**/get/list/all**
-
-**/get/list/count/{amount}**
-
-**/get/list/query/{query}**
+* **/get/list/all**
+* **/get/list/count/{amount}**
+* **/get/list/query/{query}**
 
 ### Post:
 **/post/list/add**
