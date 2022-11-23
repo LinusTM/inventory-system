@@ -7,7 +7,9 @@
 
 ### Get:
 **/get/list/all**
+
 **/get/list/count/{amount}**
+
 **/get/list/query/{query}**
 
 ### Post:
