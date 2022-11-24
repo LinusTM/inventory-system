@@ -2,6 +2,8 @@
 A project to help educators and students sort, track and get parts for various different vocational educations.
 Built on Svelte with SvelteKit, using MariaDB and C#, with ASP.NET Core and Entity Framework, for the backend.
 
+## API Endpoints
+![endpoints.md](./resources/endpoints.md)
 
 ## Entity Relations
 ```mermaid
