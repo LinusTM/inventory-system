@@ -9,8 +9,8 @@ The REST API is powered by [ASP.NET](https://dotnet.microsoft.com/en-us/apps/asp
 [ASP.NET web API documentation](https://learn.microsoft.com/en-us/aspnet/core/web-api/?WT.mc_id=dotnet-35129-website&view=aspnetcore-6.0 "Microsoft ASP.NET documentation")
 
 ### Entity Framework
-We are also using entity framework to communicate with the SQL database. [Entity Framework documuentation](https://learn.microsoft.com/en-us/ef/ef6/get-started "Get started with Entity Framework 6")
 
+We are also using entity framework to communicate with the SQL database. [Entity Framework documuentation](https://learn.microsoft.com/en-us/ef/ef6/get-started "Get started with Entity Framework 6")
 
 ## usage
 
