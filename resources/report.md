@@ -2,7 +2,7 @@
 
 In this project we are designing a system in which craftsmen are able to see what they have in their inventory using a web frontend.
 
-## UML
+## Entity relations diagram
 
 ```mermaid
 erDiagram
