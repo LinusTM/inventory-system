@@ -2,7 +2,16 @@
 
 In this project we are designing a system in which craftsmen are able to see what they have in their inventory using a web frontend.
 
-## Entity relations diagram
+## Analysis
+
+### Used technologies
+
+- [ASP.net](https://dotnet.microsoft.com/en-us/apps/aspnet)
+- [SvelteKit](https://kit.svelte.dev)
+- [MariaDB](https://mariadb.org)
+- [Nix](https://nixos.org)
+
+### Entity relations diagram
 
 ```mermaid
 erDiagram
