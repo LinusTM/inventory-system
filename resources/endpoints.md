@@ -34,4 +34,6 @@
 }
 ```
 
-`"picture" is optional`
+- `amount` will default to 1 if not specified.
+- The `picture` is optional.
+- The `picture` should be a jpg in base-64.
