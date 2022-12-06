@@ -33,8 +33,8 @@ It accepts the following parameters.
 - `section`: The section in which the item is located.
 - `sectionName`: The name of the section in which the item is located.
 - `placementNotes`: Any additional notes about the item's placement in the inventory.
-- `amount` (optional): The amount of the item in the inventory. If not specified, this will default to 1.
-- `picture` (optional): A base-64 encoded image of the inventory item.
+- `amount` **(optional)**: The amount of the item in the inventory. If not specified, this will default to 1.
+- `picture` **(optional)**: A base-64 encoded image of the inventory item.
 
 An example request body may look like this.
 
@@ -52,4 +52,5 @@ An example request body may look like this.
 ```
 
 On success it will return an empty `204 No Content` response if the item was successfully added to the inventory,
+this will include the FTZ number of the item, and the alt name.
 Otherwise an appropriate error will be returned.

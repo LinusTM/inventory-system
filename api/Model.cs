@@ -59,7 +59,7 @@ namespace InventoryAPI.Controllers
             _context.Inventory.Add(inventory);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return CreatedAtAction(nameof(inventory.FtzNumber), new { id = inventory.AltName });
         }
     }
 }
