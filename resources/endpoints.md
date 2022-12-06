@@ -8,18 +8,18 @@
 
 ### Get:
 
-- `/get/list/all`
+- `/get/all`
   Returns everything in the inventory in a json format.
 
-- `/get/list/count/{amount}`
+- `/get/count/{amount}`
   Returns the specified amount of items in the inventory.
 
-- `/get/list/query/{query}`
+- `/get/query/{query}`
   Searches for the query in the inventory, and returns the result.
 
-### Post:
+### Put:
 
-- `/post/list/add`
+- `/put/add`
 
 ```json
 {
