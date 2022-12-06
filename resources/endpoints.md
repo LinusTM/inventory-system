@@ -33,3 +33,5 @@
   "picture": "{picture}"
 }
 ```
+
+`"picture" is optional`
