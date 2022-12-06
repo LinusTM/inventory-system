@@ -4,7 +4,7 @@
 
 ### Base URL:
 
-- `{server ip}/api/inventory`
+#### `{server ip}/api/inventory`
 
 ### Get:
 
