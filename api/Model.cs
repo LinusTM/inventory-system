@@ -49,17 +49,17 @@ namespace InventoryAPI.Controllers
 
         // PUT api/inventory/put/add
         [HttpPut("put/add")]
-        public async Task<IActionResult> PutAddInventory(InventoryItem inventory)
+        public async Task<IActionResult> PutAddInventory(InventoryItem item)
         {
-            if (inventory.Amount == 0)
+            if (item.Amount == 0)
             {
-                inventory.Amount = 1;
+                item.Amount = 1;
             }
 
-            _context.Inventory.Add(inventory);
+            _context.Inventory.Add(item);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(inventory.FtzNumber), new { id = inventory.AltName });
+            return CreatedAtAction(nameof(item.FtzNumber), new { id = item.AltName });
         }
     }
 }
