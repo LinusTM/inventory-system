@@ -1,32 +1,86 @@
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-public class BloggingContext : DbContext
+namespace InventoryAPI.Controllers
 {
-    public DbSet<Blog> Blogs { get; set; }
-    public DbSet<Post> Posts { get; set; }
+    [Route("api/[controller]")]
+    [ApiController]
+    public class InventoryController : ControllerBase
+    {
+        private readonly InventoryContext _context;
+        public InventoryController(InventoryContext context)
+        {
+            _context = context;
+        }
 
-    public string DbPath { get; }
+        // GET api/inventory/get/all
+        [HttpGet("get/all")]
+        public async Task<ActionResult<IEnumerable<InventoryItem>>> GetAllInventory()
+        {
+            return await _context.Inventory.ToListAsync();
+        }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql("server=localhost;database=db_testing;user=root", new MariaDbServerVersion(new Version(10, 9, 3)));
+        // GET api/inventory/get/{amount}
+        [HttpGet("get/{amount}")]
+        public async Task<ActionResult<IEnumerable<InventoryItem>>> GetInventoryByAmount(int amount)
+        {
+            return await _context.Inventory
+                .Where(i => i.Amount == amount)
+                .ToListAsync();
+        }
+
+        // GET api/inventory/get/{query}
+        [HttpGet("get/{query}")]
+        public async Task<ActionResult<IEnumerable<InventoryItem>>> GetInventoryByQuery(string query)
+        {
+            return await _context.Inventory
+                .Where(i => i.FtzNumber.Contains(query) ||
+                            i.AltName.Contains(query) ||
+                            i.Description.Contains(query) ||
+                            i.Section.Contains(query) ||
+                            i.SectionName.Contains(query) ||
+                            i.PlacementNotes.Contains(query))
+                .ToListAsync();
+        }
+
+        // PUT api/inventory/put/add
+        [HttpPut("put/add")]
+        public async Task<IActionResult> PutAddInventory(InventoryItem inventory)
+        {
+            if (inventory.Amount == 0)
+            {
+                inventory.Amount = 1;
+            }
+
+            _context.Inventory.Add(inventory);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+    }
 }
 
-public class Blog
+public class InventoryItem
 {
-    public int BlogId { get; set; }
-    public string Url { get; set; }
-
-    public List<Post> Posts { get; } = new();
+    public int Id { get; set; }
+    public string FtzNumber { get; set; }
+    public string AltName { get; set; }
+    public string Description { get; set; }
+    public string Section { get; set; }
+    public string SectionName { get; set; }
+    public string PlacementNotes { get; set; }
+    public int Amount { get; set; }
+    public string Picture { get; set; }
 }
 
-public class Post
+public class InventoryContext : DbContext
 {
-    public int PostId { get; set; }
-    public string Title { get; set; }
-    public string Content { get; set; }
-
-    public int BlogId { get; set; }
-    public Blog Blog { get; set; }
+    public InventoryContext(DbContextOptions<InventoryContext> options)
+    : base(options)
+    { }
+    public DbSet<InventoryItem> Inventory { get; set; }
 }
