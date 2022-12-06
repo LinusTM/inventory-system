@@ -53,7 +53,3 @@ An example request body may look like this.
 
 On success it will return an empty `204 No Content` response if the item was successfully added to the inventory,
 Otherwise an appropriate error will be returned.
-
-- `amount` will default to 1 if not specified.
-- The `picture` is optional.
-- The `picture` should be a jpg in base-64.
