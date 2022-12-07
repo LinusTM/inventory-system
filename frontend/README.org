@@ -1,5 +1,5 @@
 * Frontend
-This is the frontend for the project, which is powered by Svelte, Typescript, and Sass.
+This is the frontend for the project, which is powered by [[https://kit.svelte.dev][Sveltekit]], [[https://www.typescriptlang.org]Typescript], and [[https://sass-lang.com]Sass].
 
 It includes a search page, and an admin page.
 
