@@ -52,7 +52,7 @@ An example return body may lok like this.
 
 Returns the specified amount of items in the inventory.
 
-An example of a return value for `/get/count/2` may look like this.
+An example of a return body for `/get/count/2` may look like this.
 
 ```json
 {
@@ -64,7 +64,6 @@ An example of a return value for `/get/count/2` may look like this.
     "sectionName": "Transmission Fluids",
     "placementNotes": "Located on shelf 10, next to the transmission filters.",
     "amount": 6,
-    "picture": "base-64 encoded image string"
   }
   {
     "ftzNumber": "FTZ-2323",
@@ -83,7 +82,7 @@ An example of a return value for `/get/count/2` may look like this.
 
 Searches for the query in the inventory, and returns the result.
 
-An example of a return value for `/get/query/wrench/` may look like this.
+An example of a return body for `/get/query/wrench/` may look like this.
 
 ```json
 {
