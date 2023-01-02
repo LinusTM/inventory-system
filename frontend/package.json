@@ -30,6 +30,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"gridjs": "^5.1.0",
+		"gridjs-svelte": "^2.1.1",
 		"node-sass": "^7.0.1",
 		"sass": "^1.54.8"
 	}
