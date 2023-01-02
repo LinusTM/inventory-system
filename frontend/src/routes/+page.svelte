@@ -1,68 +1,43 @@
 <script lang="ts">
-	import Up from '$lib/shared/icons/Up.svelte';
-	import Down from '$lib/shared/icons/Down.svelte';
+	import Grid from 'gridjs-svelte';
 
-	const items = [
+	const data = [
 		{
-			label: 'dill',
-			id: 'aaa1350',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Anethum_graveolens_001.JPG'
+			ftzNumber: 'FTZ-5678',
+			altName: 'Engine Oil',
+			description: 'High-quality engine oil for improved performance.',
+			section: 'B2',
+			sectionName: 'Vehicle Fluids',
+			placementNotes: 'Located on shelf 2, in the back corner of the room.',
+			amount: 10,
+			picture: 'base-64 encoded image string'
 		},
 		{
-			label: 'iceberg lettuce',
-			id: 'g177013',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/d/da/Iceberg_lettuce_in_SB.jpg'
+			ftzNumber: 'FTZ-9101',
+			altName: 'Tire Pressure Gauge',
+			description: 'Digital tire pressure gauge with LCD display.',
+			section: 'C3',
+			sectionName: 'Tire Tools',
+			placementNotes: 'Located on shelf 3, next to the air compressor.',
+			amount: 3
 		},
 		{
-			label: 'lavender',
-			id: '',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/Single_lavender_flower02.jpg'
-		},
-		{
-			label: 'dates',
-			id: '',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-			image:
-				'https://upload.wikimedia.org/wikipedia/commons/3/38/Mazafati_dates_-_whole%2C_halved_and_seed.jpg'
-		},
-		{
-			label: 'oats',
-			id: '',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-			image: 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Avena_sativa_004.JPG'
+			ftzNumber: 'FTZ-1234',
+			altName: 'Spare Part',
+			description: 'A spare part for use in repair.',
+			section: 'A1',
+			sectionName: 'Spare Parts',
+			placementNotes: 'Located on shelf 1, next to the blue tools.',
+			amount: 5,
+			picture: 'base-64 encoded image string'
 		}
 	];
 </script>
 
 <h1>Søg på reservedel</h1>
 
-<form id="form">
-	<input type="search" id="query" name="q" placeholder="FTZ nummer eller lign." />
-	<button>Søg</button>
-</form>
-
 <div id="container">
-	{#each items as item}
-		<div id="result">
-			<img src={item.image} alt={item.label} />
-			<div>
-				<h3>{item.id} - {item.label}</h3>
-				<p>{item.description}</p>
-				<div>
-					<button><Up /></button>
-					<button><Down /></button>
-				</div>
-			</div>
-		</div>
-	{/each}
+	<Grid {data} search={true} autoWidth={false} fixedHeader={false} resizable={true} />
 </div>
 
 <style lang="scss">

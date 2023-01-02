@@ -107,7 +107,7 @@ SPAREPART {
 - The system needs to be easy to use.
 - The system needs to be highly performant, even under load.
 - The list of what's in their inventory, needs to be updated frequently, in order to keep up with any demand.
-- The system should use and SQL database to keep track of the inventory.
+- The system should use an SQL database to keep track of the inventory.
 
 ## Implementation
 
