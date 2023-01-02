@@ -1,4 +1,4 @@
-# Inventory system
+#I want you to act as a rival chess player. I We will say our moves in reciprocal order. In the beginning I will be white. Also please don't explain your moves to me because we are rivals. After my first message i will just write my move. Don't forget to update the state of the board in your mind as we make moves. My first move is e4. Inventory system
 
 A project to help educators and students sort, track and get parts for various different vocational educations.
 Built on Svelte with SvelteKit, using MariaDB and C#, with ASP.NET Core and Entity Framework, for the backend.
