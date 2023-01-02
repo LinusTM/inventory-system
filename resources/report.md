@@ -111,6 +111,14 @@ SPAREPART {
 
 ## Implementation
 
+- We expect the project to be run on a Linux based server, although it may be cross-platform.
+
+### User Guide
+
+- [inventory system api guide](../api/README.md) Inside of the README.md
+
 ## Conclusion
 
 ## References
+
+- [entity relations](../README.md) Inside of the README.md
