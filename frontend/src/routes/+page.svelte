@@ -1,124 +1,47 @@
 <script lang="ts">
 	import Grid from 'gridjs-svelte';
+	import { faker } from '@faker-js/faker';
 
-	const data = [
-		{
-			ftzNumber: 'FTZ-5678',
-			altName: 'Engine Oil',
-			description: 'High-quality engine oil for improved performance.',
-			section: 'B2',
-			sectionName: 'Vehicle Fluids',
-			placementNotes: 'Located on shelf 2, in the back corner of the room.',
-			amount: 10,
-			picture: 'base-64 encoded image string'
-		},
-		{
-			ftzNumber: 'FTZ-9101',
-			altName: 'Tire Pressure Gauge',
-			description: 'Digital tire pressure gauge with LCD display.',
-			section: 'C3',
-			sectionName: 'Tire Tools',
-			placementNotes: 'Located on shelf 3, next to the air compressor.',
-			amount: 3
-		},
-		{
-			ftzNumber: 'FTZ-1234',
-			altName: 'Spare Part',
-			description: 'A spare part for use in repair.',
-			section: 'A1',
-			sectionName: 'Spare Parts',
-			placementNotes: 'Located on shelf 1, next to the blue tools.',
-			amount: 5,
-			picture: 'base-64 encoded image string'
-		},
-		{
-			ftzNumber: 'FTZ-5678',
-			altName: 'Engine Oil',
-			description: 'High-quality engine oil for improved performance.',
-			section: 'B2',
-			sectionName: 'Vehicle Fluids',
-			placementNotes: 'Located on shelf 2, in the back corner of the room.',
-			amount: 10,
-			picture: 'base-64 encoded image string'
-		},
-		{
-			ftzNumber: 'FTZ-9101',
-			altName: 'Tire Pressure Gauge',
-			description: 'Digital tire pressure gauge with LCD display.',
-			section: 'C3',
-			sectionName: 'Tire Tools',
-			placementNotes: 'Located on shelf 3, next to the air compressor.',
-			amount: 3
-		},
-		{
-			ftzNumber: 'FTZ-1234',
-			altName: 'Spare Part',
-			description: 'A spare part for use in repair.',
-			section: 'A1',
-			sectionName: 'Spare Parts',
-			placementNotes: 'Located on shelf 1, next to the blue tools.',
-			amount: 5,
-			picture: 'base-64 encoded image string'
-		},
-		{
-			ftzNumber: 'FTZ-5678',
-			altName: 'Engine Oil',
-			description: 'High-quality engine oil for improved performance.',
-			section: 'B2',
-			sectionName: 'Vehicle Fluids',
-			placementNotes: 'Located on shelf 2, in the back corner of the room.',
-			amount: 10,
-			picture: 'base-64 encoded image string'
-		},
-		{
-			ftzNumber: 'FTZ-9101',
-			altName: 'Tire Pressure Gauge',
-			description: 'Digital tire pressure gauge with LCD display.',
-			section: 'C3',
-			sectionName: 'Tire Tools',
-			placementNotes: 'Located on shelf 3, next to the air compressor.',
-			amount: 3
-		},
-		{
-			ftzNumber: 'FTZ-1234',
-			altName: 'Spare Part',
-			description: 'A spare part for use in repair.',
-			section: 'A1',
-			sectionName: 'Spare Parts',
-			placementNotes: 'Located on shelf 1, next to the blue tools.',
-			amount: 5,
-			picture: 'base-64 encoded image string'
-		},
-		{
-			ftzNumber: 'FTZ-5678',
-			altName: 'Engine Oil',
-			description: 'High-quality engine oil for improved performance.',
-			section: 'B2',
-			sectionName: 'Vehicle Fluids',
-			placementNotes: 'Located on shelf 2, in the back corner of the room.',
-			amount: 10,
-			picture: 'base-64 encoded image string'
-		},
-		{
-			ftzNumber: 'FTZ-9101',
-			altName: 'Tire Pressure Gauge',
-			description: 'Digital tire pressure gauge with LCD display.',
-			section: 'C3',
-			sectionName: 'Tire Tools',
-			placementNotes: 'Located on shelf 3, next to the air compressor.',
-			amount: 3
-		},
-		{
-			ftzNumber: 'FTZ-1234',
-			altName: 'Spare Part',
-			description: 'A spare part for use in repair.',
-			section: 'A1',
-			sectionName: 'Spare Parts',
-			placementNotes: 'Located on shelf 1, next to the blue tools.',
-			amount: 5,
-			picture: 'base-64 encoded image string'
+	class Entry {
+		ftzNumber: string;
+		altName: string;
+		description: string;
+		section: string;
+		sectionName: string;
+		placementNotes: string;
+		amount: number;
+		picture: string;
+
+		constructor() {
+			(this.ftzNumber = faker.random.alpha(1) + faker.random.numeric(3)),
+				(this.altName = faker.commerce.productAdjective() + faker.commerce.product()),
+				(this.description = faker.commerce.productName()),
+				(this.section = faker.random.alphaNumeric(2)),
+				(this.sectionName = faker.random.words(2)),
+				(this.placementNotes = faker.lorem.words(4)),
+				(this.amount = Math.random() * 100),
+				(this.picture = faker.image.image(420, 420, true));
 		}
-	];
+	}
+
+	const createEntry = () => {
+		return {
+			ftzNumber: faker.random.alpha(1) + faker.random.numeric(3),
+			altName: faker.commerce.productAdjective() + faker.commerce.product(),
+			description: faker.commerce.productName(),
+			section: faker.random.alphaNumeric(2),
+			sectionName: faker.random.words(2),
+			placementNotes: faker.lorem.words(4),
+			amount: Math.random() * 100,
+			picture: faker.image.image(420, 420, true)
+		};
+	};
+
+	const createEntries = (amount = 5) => {
+		return new Array(amount).fill(undefined).map(createEntry);
+	};
+
+	const data = createEntries(1000);
 
 	const className = {
 		table: 'table',
@@ -127,20 +50,25 @@
 		td: 'table-td',
 		th: 'table-th'
 	};
+
+	const pagination = {
+		enabled: true,
+		limit: 50
+	};
 </script>
 
 <h1>Søg på reservedel</h1>
 
 <div id="container">
-	<Grid {data} {className} search={true} autoWidth={true} sort={false} />
+	<Grid {data} {className} {pagination} search={true} autoWidth={true} sort={false} />
 </div>
 
 <style lang="scss">
 	@import '../scss/text.scss';
 
 	:global(.table) {
-		border: solid var(--background-dark);
-		border-radius: 20px;
+		border: solid var(--background-dark) 2px;
+		border-radius: 12px;
 		margin: 0;
 	}
 

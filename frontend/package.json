@@ -30,6 +30,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@faker-js/faker": "^7.6.0",
+		"carbon-preprocess-svelte": "^0.9.1",
+		"faker": "^6.6.6",
 		"gridjs": "^5.1.0",
 		"gridjs-svelte": "^2.1.1",
 		"node-sass": "^7.0.1",

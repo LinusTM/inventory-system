@@ -1,4 +1,4 @@
-<script type="ts">
+<script>
 	import { page } from '$app/stores';
 	const navItems = [
 		{ label: 'ADMIN', href: '/admin' },
