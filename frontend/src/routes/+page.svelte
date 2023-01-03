@@ -13,18 +13,18 @@
 		picture: string;
 
 		constructor() {
-			(this.ftzNumber = faker.random.alpha(1) + faker.random.numeric(3)),
-				(this.altName = faker.commerce.productAdjective() + faker.commerce.product()),
-				(this.description = faker.commerce.productName()),
-				(this.section = faker.random.alphaNumeric(2)),
-				(this.sectionName = faker.random.words(2)),
-				(this.placementNotes = faker.lorem.words(4)),
-				(this.amount = Math.random() * 100),
-				(this.picture = faker.image.image(420, 420, true));
+			this.ftzNumber = 'temp';
+			this.altName = 'temp';
+			this.description = 'temp';
+			this.section = 'temp';
+			this.sectionName = 'temp';
+			this.placementNotes = 'temp';
+			this.amount = 0;
+			this.picture = 'temp';
 		}
 	}
 
-	const createEntry = () => {
+	const randomEntry = () => {
 		return {
 			ftzNumber: faker.random.alpha(1) + faker.random.numeric(3),
 			altName: faker.commerce.productAdjective() + faker.commerce.product(),
@@ -32,16 +32,16 @@
 			section: faker.random.alphaNumeric(2),
 			sectionName: faker.random.words(2),
 			placementNotes: faker.lorem.words(4),
-			amount: Math.random() * 100,
+			amount: Math.floor(Math.random() * 500),
 			picture: faker.image.image(420, 420, true)
 		};
 	};
 
-	const createEntries = (amount = 5) => {
-		return new Array(amount).fill(undefined).map(createEntry);
+	const randomEntries = (amount = 5) => {
+		return new Array(amount).fill(undefined).map(randomEntry);
 	};
 
-	const data = createEntries(1000);
+	const data = randomEntries(1000);
 
 	const className = {
 		table: 'table',
