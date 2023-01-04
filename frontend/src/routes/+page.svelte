@@ -24,11 +24,7 @@
 		}
 	}
 
-	const randomEntries = (amount = 5) => {
-		return new Array(amount).fill(undefined).map(() => new Entry());
-	};
-
-	const data = randomEntries(1000);
+	const data = new Array(1000).fill(undefined).map(() => new Entry());
 
 	const className = {
 		table: 'table',
