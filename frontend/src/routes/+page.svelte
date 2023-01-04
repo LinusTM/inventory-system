@@ -13,32 +13,19 @@
 		picture: string;
 
 		constructor() {
-			this.ftzNumber = 'temp';
-			this.altName = 'temp';
-			this.description = 'temp';
-			this.section = 'temp';
-			this.sectionName = 'temp';
-			this.placementNotes = 'temp';
-			this.amount = 0;
-			this.picture = 'temp';
+			this.ftzNumber = faker.random.alpha(1) + faker.random.numeric(3);
+			this.altName = faker.commerce.productAdjective() + faker.commerce.product();
+			this.description = faker.commerce.productName();
+			this.section = faker.random.alphaNumeric(2);
+			this.sectionName = faker.random.words(2);
+			this.placementNotes = faker.lorem.words(4);
+			this.amount = Math.floor(Math.random() * 500);
+			this.picture = faker.image.image(420, 420, true);
 		}
 	}
 
-	const randomEntry = () => {
-		return {
-			ftzNumber: faker.random.alpha(1) + faker.random.numeric(3),
-			altName: faker.commerce.productAdjective() + faker.commerce.product(),
-			description: faker.commerce.productName(),
-			section: faker.random.alphaNumeric(2),
-			sectionName: faker.random.words(2),
-			placementNotes: faker.lorem.words(4),
-			amount: Math.floor(Math.random() * 500),
-			picture: faker.image.image(420, 420, true)
-		};
-	};
-
 	const randomEntries = (amount = 5) => {
-		return new Array(amount).fill(undefined).map(randomEntry);
+		return new Array(amount).fill(undefined).map(() => new Entry());
 	};
 
 	const data = randomEntries(1000);
@@ -48,7 +35,8 @@
 		header: 'table-header',
 		tbody: 'table-body',
 		td: 'table-td',
-		th: 'table-th'
+		th: 'table-th',
+		search: 'table-search'
 	};
 
 	const pagination = {
@@ -71,18 +59,19 @@
 		margin: 0;
 		border-spacing: 0;
 		border-radius: 12px;
+		width: 100%;
 	}
 
 	:global(.table-td, .table-th) {
-		padding: 0;
+		padding: 2px;
 		text-align: center;
 	}
 
 	:global(.table-body > tr) {
 		background-color: var(--background-light);
 		color: var(--text-dark);
-		transition: background-color 0.1s linear;
-		transition: color 0.1 linear;
+		transition: background-color 0.1s ease;
+		transition: color 0.1s linear;
 	}
 
 	:global(.table-body > tr:nth-child(odd)) {
@@ -102,8 +91,6 @@
 	}
 
 	#container {
-		@media screen and (max-width: 800px) {
-			margin: 0 5%;
-		}
+		overflow: auto;
 	}
 </style>

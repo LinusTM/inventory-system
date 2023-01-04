@@ -71,25 +71,13 @@
 	/* CONTENT */
 	#content {
 		align-self: center;
-		margin: 4rem 2rem 6rem 2rem;
+		margin: 4rem 6rem;
 		font-size: 1.2rem;
 		line-height: 1.9;
 		background-color: var(--background);
 		color: var(--text);
-		border-radius: 3px;
 		flex: 1;
-
-		@media screen and (max-width: 800px) {
-			width: 100%;
-		}
-
-		@media screen and (min-width: 801px) and (max-width: 1300px) {
-			width: 84%;
-		}
-
-		@media screen and (min-width: 1301px) {
-			width: 75%;
-		}
+		width: min(800px + 30%, 98%);
 	}
 
 	/* FOOTER */
