@@ -56,6 +56,46 @@
 		border-spacing: 0;
 		border-radius: 12px;
 		width: 100%;
+		overflow: hidden;
+	}
+
+	:global(.table-search) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid var(--border-color);
+		border-radius: 6px;
+		margin: 2rem 1rem;
+
+		:global(input) {
+			outline: none;
+			border: none;
+			font-size: 0.8rem;
+			width: min(400px + 40%, 98%);
+			border-radius: 6px;
+			background-color: var(--background-medium);
+			border: solid var(--background-dark) 2px;
+			height: 2rem;
+		}
+
+		:global(button) {
+			outline: none;
+			border: none;
+			background-color: var(--button-bg-color);
+			color: var(--button-text-color);
+			font-size: 0.8rem;
+			padding: 0 16px;
+			border-radius: 6px;
+			cursor: pointer;
+		}
+	}
+
+	:global(.table-td) {
+		font-size: 0.8rem;
+	}
+
+	:global(.table-th) {
+		font-size: 0.9rem;
 	}
 
 	:global(.table-td, .table-th) {
