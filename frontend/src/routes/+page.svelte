@@ -24,7 +24,7 @@
 		}
 	}
 
-	const data = new Array(1000).fill(undefined).map(() => new Entry());
+	const data: any = Array.from({ length: 1000 }, () => new Entry());
 
 	const className = {
 		table: 'table',
