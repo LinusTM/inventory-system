@@ -68,19 +68,21 @@
 
 	:global(.table) {
 		border: solid var(--background-dark) 2px;
-		border-radius: 12px;
 		margin: 0;
+		border-spacing: 0;
+		border-radius: 12px;
 	}
 
 	:global(.table-td, .table-th) {
 		padding: 0;
+		text-align: center;
 	}
 
 	:global(.table-body > tr) {
 		background-color: var(--background-light);
 		color: var(--text-dark);
-		transition: background-color 0.2s linear;
-		transition: color 0.3 linear;
+		transition: background-color 0.1s linear;
+		transition: color 0.1 linear;
 	}
 
 	:global(.table-body > tr:nth-child(odd)) {
@@ -91,8 +93,8 @@
 	:global(.table-body > tr:hover, .table-body > tr:nth-child(odd):hover) {
 		background-color: var(--background-grayish);
 		color: var(--text-light);
-		transition: background-color 0.3s ease;
-		transition: color 0.3s linear;
+		transition: background-color 0.1s ease;
+		transition: color 0.1s linear;
 	}
 
 	:global(.table-body > th) {
