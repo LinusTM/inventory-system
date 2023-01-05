@@ -101,10 +101,9 @@
 		color: var(--text-dark);
 	}
 
-	:global(.table-body > tr:hover, .table-body > tr:nth-child(odd):hover) {
+	:global(.table-body > tr:hover) {
 		background-color: var(--background-grayish);
 		color: var(--text-light);
-		transition: background-color 0.1s ease, color 0.1s linear;
 	}
 
 	:global(.table-body > th) {
