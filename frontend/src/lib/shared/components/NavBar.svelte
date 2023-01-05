@@ -30,9 +30,6 @@
 
 	div {
 		display: flex;
-		flex-direction: row;
-		position: sticky;
-		width: 100%;
 		height: 4rem;
 
 		@media (prefers-color-scheme: light) {
@@ -45,7 +42,7 @@
 			background-color: var(--background-medium);
 		}
 
-		font-size: 16px;
+		font-size: 1.05rem;
 		align-items: center;
 		box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
 			0 2px 8px hsla(0, 0%, 0%, 0.05);
@@ -64,22 +61,17 @@
 
 		@media (prefers-color-scheme: light) {
 			color: var(--text-light);
-			border-color: var(--text-light);
 		}
 
 		@media (prefers-color-scheme: dark) {
 			color: var(--text);
-			border-color: var(--text);
 		}
 	}
 
-	a:hover {
-		border-bottom-width: 2px;
-	}
-
+	a:hover,
 	#selected {
-		border-bottom-style: solid;
 		border-bottom-width: 2px;
+		border-bottom-style: solid;
 	}
 
 	span {
@@ -87,11 +79,10 @@
 	}
 
 	img {
-		max-height: 2.3em;
+		height: 2.3em;
 		margin-top: 4.5%;
 		padding-right: 2px;
-		border-right: 2.5px solid #fff;
-		margin-right: 0;
+		border-right: 2.5px solid;
 	}
 
 	#img {
