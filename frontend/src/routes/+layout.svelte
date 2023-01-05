@@ -61,11 +61,34 @@
 </div>
 
 <style lang="scss">
+	/* COLORS */
+	:root {
+		@media (prefers-color-scheme: light) {
+			--background: hsl(0, 0%, 100%);
+			--background-medium: hsl(0, 0%, 96%);
+			--background-dark: hsl(0, 0%, 11%);
+			--background-grayish: hsl(0, 0%, 40%);
+			--text: hsl(0, 0%, 0%);
+			--text-light: hsl(0, 0%, 100%);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			--background: hsl(0, 0%, 10%);
+			--background-medium: hsl(0, 0%, 16%);
+			--background-dark: hsl(0, 0%, 98%);
+			--background-grayish: hsl(0, 0%, 60%);
+			--text: hsl(0, 0%, 100%);
+			--text-light: hsl(0, 0%, 0%);
+		}
+	}
+
 	/* CONTAINER */
 	#container {
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		background-color: var(--background);
+		color: var(--text);
 	}
 
 	/* CONTENT */
@@ -74,18 +97,27 @@
 		margin: 4rem 6rem;
 		font-size: 1.2rem;
 		line-height: 1.9;
-		background-color: var(--background);
-		color: var(--text);
 		flex: 1;
 		width: min(800px + 30%, 98%);
+	}
+
+	footer,
+	a {
+		@media (prefers-color-scheme: light) {
+			color: var(--text-light);
+			background-color: var(--background-dark);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			color: var(--text);
+			background-color: var(--background-medium);
+		}
 	}
 
 	/* FOOTER */
 	footer {
 		padding: 1.5em;
 		font-size: 1rem;
-		color: var(--text-light);
-		background-color: var(--background-dark);
 	}
 
 	:global(*) {

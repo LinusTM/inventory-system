@@ -34,8 +34,17 @@
 		position: sticky;
 		width: 100%;
 		height: 4rem;
-		color: var(--text-light);
-		background-color: var(--background-dark);
+
+		@media (prefers-color-scheme: light) {
+			color: var(--text-light);
+			background-color: var(--background-dark);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			color: var(--text);
+			background-color: var(--background-medium);
+		}
+
 		font-size: 16px;
 		align-items: center;
 		box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
@@ -52,6 +61,16 @@
 		transition: all 0.1s ease;
 		font-size: 1.3rem;
 		font-weight: 600;
+
+		@media (prefers-color-scheme: light) {
+			color: var(--text-light);
+			border-color: var(--text-light);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			color: var(--text);
+			border-color: var(--text);
+		}
 	}
 
 	a:hover {

@@ -100,8 +100,6 @@
 	}
 
 	#image_select label {
-		background-color: var(--background-dark);
-		color: var(--text-light);
 		padding: 0.5rem;
 		font-weight: 600;
 		border-radius: 2px;
@@ -109,8 +107,17 @@
 		padding: 1rem;
 	}
 
-	#image_select label:hover {
-		background-color: #3a3a3a;
+	#image_select label,
+	button {
+		background-color: var(--background-medium);
+		color: var(--text);
+		transition: background-color 0.1s ease, color 0.1s linear;
+	}
+
+	#image_select label:hover,
+	button:hover {
+		background-color: var(--background-dark);
+		color: var(--text-light);
 	}
 
 	#names {
@@ -161,8 +168,6 @@
 
 	button {
 		border: none;
-		background-color: var(--background-dark);
-		color: var(--text-light);
 		border-radius: 2px;
 		font-style: italic;
 		font-weight: 600;
@@ -172,7 +177,6 @@
 	}
 
 	button:hover {
-		background-color: #3a3a3a;
 		cursor: pointer;
 	}
 </style>
