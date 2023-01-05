@@ -51,7 +51,7 @@
 	@import '../scss/text.scss';
 
 	:global(.table) {
-		border: solid var(--background-dark) 2px;
+		border: solid var(--background-grayish) 2px;
 		margin: 0;
 		border-spacing: 0;
 		border-radius: 12px;
@@ -72,7 +72,7 @@
 			width: min(400px + 40%, 100%);
 			border-radius: 6px;
 			background-color: var(--background-medium);
-			border: solid var(--background-dark) 2px;
+			border: solid var(--background-grayish) 2px;
 			height: 2rem;
 		}
 	}
