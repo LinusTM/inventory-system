@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+
 	const navItems = [
 		{ label: 'ADMIN', href: '/admin' },
 		{ label: 'SØG', href: '/' }
@@ -12,6 +13,8 @@
 	<a id="img" href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
 	<p id="education">{education}</p>
 	<span />
+
+	<!-- looping throug the navItems object, and putting them all in the navbar -->
 	{#each navItems as navItem}
 		{#if $page.url.pathname == navItem.href}
 			<a id="selected" href={navItem.href}>{navItem.label}</a>
