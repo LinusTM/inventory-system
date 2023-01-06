@@ -2,7 +2,7 @@
 	let files: any;
 </script>
 
-<h1>Tilføj ny reservedel</h1>
+<h1 class="header">Tilføj ny reservedel</h1>
 
 <div id="container">
 	<div id="names">
@@ -62,8 +62,6 @@
 </div>
 
 <style lang="scss">
-	@import '../../scss/text.scss';
-
 	#container {
 		display: grid;
 	}
@@ -161,8 +159,14 @@
 	}
 
 	input {
+		color: var(--text);
+		font-size: 1rem;
 		border: none;
-		border-bottom: 2px solid #000;
+		height: 2rem;
+		width: 9rem;
+		background-color: var(--background-medium);
+		border-bottom: 2px solid var(--text);
+		appearance: textfield;
 		margin-bottom: 2em;
 	}
 
@@ -174,6 +178,17 @@
 		font-size: 1em;
 		margin-top: 2em;
 		padding: 1rem;
+	}
+
+	textarea {
+		border: none;
+		background-color: var(--background-medium);
+		border-bottom: 2px solid var(--text);
+		resize: none;
+		width: 16.5rem;
+		height: 8rem;
+		color: var(--text);
+		font-size: 1rem;
 	}
 
 	button:hover {

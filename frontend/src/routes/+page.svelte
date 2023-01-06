@@ -2,6 +2,7 @@
 	import Grid from 'gridjs-svelte';
 	import { faker } from '@faker-js/faker';
 
+	// Defines the "Entry" class, so that we can easily couple the data together
 	class Entry {
 		ftzNumber: string;
 		altName: string;
@@ -12,6 +13,7 @@
 		amount: number;
 		picture: string;
 
+		// The constructor will generate random values if no parameters are given.
 		constructor() {
 			this.ftzNumber = faker.random.alpha(1) + faker.random.numeric(3);
 			this.altName = faker.commerce.productAdjective() + faker.commerce.product();
@@ -24,8 +26,11 @@
 		}
 	}
 
+	// Creates an array with a length of 1000, filled with random data.
+	// Currently used for testing purposes.
 	const data: any = Array.from({ length: 1000 }, () => new Entry());
 
+	// We are assigning parts of the table to classes, so that we can modify the styling.
 	const className = {
 		table: 'table',
 		header: 'table-header',
@@ -35,21 +40,25 @@
 		search: 'table-search'
 	};
 
+	// Enableing pagination, and setting entry limit per page to 50.
 	const pagination = {
 		enabled: true,
 		limit: 50
 	};
 </script>
 
-<h1>Søg på reservedel</h1>
+<h1 class="header">Søg på reservedel</h1>
 
+<!-- Defines the container div with the table in it -->
 <div id="container">
 	<Grid {data} {className} {pagination} search={true} autoWidth={true} sort={false} />
 </div>
 
 <style lang="scss">
-	@import '../scss/text.scss';
+	/* A lot of stuff is selected using the ":global()" modifier,
+		 as it is required in order to select elements inside of the gridjs table.*/
 
+	/* TABLE */
 	:global(.table) {
 		border: solid var(--background-grayish) 2px;
 		margin: 0;
@@ -71,6 +80,7 @@
 			font-size: 0.8rem;
 			width: min(400px + 40%, 100%);
 			border-radius: 6px;
+			color: var(--text);
 			background-color: var(--background-medium);
 			border: solid var(--background-grayish) 2px;
 			height: 2rem;
@@ -110,6 +120,8 @@
 		text-align: center;
 	}
 
+	/* We are assigning "overflow: auto", in order to make sure that you can scroll
+		 through the table if your screen is too small, or that you are zoomed in */
 	#container {
 		overflow: auto;
 	}
