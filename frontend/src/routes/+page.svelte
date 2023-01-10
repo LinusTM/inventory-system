@@ -51,7 +51,11 @@
 
 <!-- Defines the container div with the table in it -->
 <div id="container">
-	<Grid {data} {className} {pagination} search={true} autoWidth={true} sort={false} />
+	{#if data.length != 0}
+		<Grid {data} {className} {pagination} search={true} autoWidth={true} sort={false} />
+	{:else}
+		<h1 class="header">No data in database</h1>
+	{/if}
 </div>
 
 <style lang="scss">
