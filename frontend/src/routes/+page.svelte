@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Grid from 'gridjs-svelte';
+	import Modal from 'svelte-simple-modal';
 	import { faker } from '@faker-js/faker';
 
 	// Defines the "Entry" class, so that we can easily couple the data together
@@ -40,6 +41,44 @@
 		search: 'table-search'
 	};
 
+	const columns = [
+		{
+			name: 'FTZ',
+			id: 'ftzNumber'
+		},
+		{
+			name: 'Navn',
+			id: 'altName'
+		},
+		{
+			name: 'Beskrivelse',
+			id: 'description'
+		},
+		{
+			name: 'Sektion',
+			id: 'section'
+		},
+		{
+			name: 'Sektion navn',
+			id: 'sectionName',
+			hidden: true
+		},
+		{
+			name: 'Placerings noter',
+			id: 'placementNotes',
+			hidden: true
+		},
+		{
+			name: 'Mængde',
+			id: 'amount'
+		},
+		{
+			name: 'Billede',
+			id: 'picture',
+			hidden: true
+		}
+	];
+
 	// Enableing pagination, and setting entry limit per page to 50.
 	const pagination = {
 		enabled: true,
@@ -52,7 +91,7 @@
 <!-- Defines the container div with the table in it -->
 <div id="container">
 	{#if data.length != 0}
-		<Grid {data} {className} {pagination} search={true} autoWidth={true} sort={false} />
+		<Grid {data} {columns} {className} {pagination} search={true} autoWidth={true} sort={false} />
 	{:else}
 		<h1 class="header">No data in database</h1>
 	{/if}
