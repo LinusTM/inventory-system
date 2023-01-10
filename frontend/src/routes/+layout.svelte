@@ -3,8 +3,6 @@
 	import NavBar from '$lib/shared/components/NavBar.svelte';
 	import Email from '$lib/shared/icons/Email.svelte';
 	import Github from '$lib/shared/icons/Github.svelte';
-
-	const currentYear = new Date().getFullYear();
 </script>
 
 <svelte:head>
@@ -57,6 +55,10 @@
 			<Github />
 			github.com/LinusTM/inventory-system
 		</a>
+		<br />
+		<p>
+			<i>ZBC Ringsted: 2022 - {new Date().getFullYear()}</i>
+		</p>
 	</footer>
 </div>
 
@@ -86,6 +88,7 @@
 	:global(body, html) {
 		margin: 0 auto;
 		padding: 0 auto;
+		background-color: var(--background);
 	}
 
 	/* LINKS */
