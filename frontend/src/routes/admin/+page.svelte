@@ -122,27 +122,14 @@
 		grid-area: names;
 	}
 
-	#note_input {
-		border-bottom: 2px solid #000;
-		background-color: #f5f5f5;
-		height: 8em;
-	}
-
 	#description {
 		margin-bottom: 1.8em;
-	}
-
-	#description input {
-		border-bottom: 2px solid #000;
-		background-color: #f5f5f5;
-		height: 10em;
 	}
 
 	#add_part {
 		display: flex;
 
-		input,
-		button {
+		input {
 			margin-left: 2em;
 			height: 50px;
 			width: 100px;
