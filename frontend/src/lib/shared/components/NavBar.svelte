@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import Zbc from '../icons/Zbc.svelte';
 
 	const navItems = [
 			{ label: 'ADMIN', href: '/admin' },
@@ -9,7 +10,7 @@
 </script>
 
 <div>
-	<a id="img" href="/"><img src="./images/logo.png" alt="ZBC logo" /></a>
+	<a id="img" href="/"><Zbc /></a>
 	<p id="education">{education}</p>
 	<span />
 
@@ -80,10 +81,8 @@
 		flex: 1 1 auto;
 	}
 
-	img {
-		height: 2.3em;
-		margin-top: 4.5%;
-		padding-right: 2px;
+	#img {
+		padding: 2px 8px;
 		border-right: 2.5px solid;
 	}
 
