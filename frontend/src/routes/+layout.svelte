@@ -135,6 +135,7 @@
 	footer {
 		@media (prefers-color-scheme: light) {
 			background-color: var(--background-dark);
+			color: var(--text-light);
 
 			a {
 				color: var(--text-light);
@@ -147,6 +148,7 @@
 
 		@media (prefers-color-scheme: dark) {
 			background-color: var(--background-medium);
+			color: var(--text);
 
 			a {
 				color: var(--text);
