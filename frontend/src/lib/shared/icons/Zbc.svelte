@@ -1,16 +1,15 @@
 <svg
 	version="1.1"
 	id="logo"
-	xmlns="http://www.w3.org/2000/svg"
 	x="0"
 	y="0"
 	width="60"
 	height="31"
 	viewBox="0 0 60 31"
 	xml:space="preserve"
-	><style>
+	><style lang="scss">
 		.st0 {
-			fill: #fff;
+			fill: var(--text);
 		}
 	</style><path
 		class="st0"
