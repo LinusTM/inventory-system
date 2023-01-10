@@ -2,11 +2,10 @@
 	import { page } from '$app/stores';
 
 	const navItems = [
-		{ label: 'ADMIN', href: '/admin' },
-		{ label: 'SØG', href: '/' }
-	];
-
-	var education = 'Automekaniker';
+			{ label: 'ADMIN', href: '/admin' },
+			{ label: 'SØG', href: '/' }
+		],
+		education = 'Automekaniker';
 </script>
 
 <div>
