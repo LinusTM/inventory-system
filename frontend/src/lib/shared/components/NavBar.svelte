@@ -26,9 +26,10 @@
 
 <style lang="scss">
 	#education {
-		@media screen and (max-width: 796px) {
+		@media screen and (max-width: 512px) {
 			display: none;
 		}
+		margin: 0;
 	}
 
 	div {
@@ -38,7 +39,7 @@
 		color: var(--text);
 		background-color: var(--background-medium);
 
-		font-size: 1.05rem;
+		font-size: 1rem;
 		align-items: center;
 		box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
 			0 2px 8px hsla(0, 0%, 0%, 0.05);
@@ -52,7 +53,7 @@
 	a {
 		text-decoration: none;
 		transition: all 0.1s ease;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		font-weight: 600;
 
 		color: var(--text);

@@ -152,7 +152,7 @@
 		text-align: center;
 		margin-bottom: 2rem;
 		margin-top: 0;
-		font-size: 3.25rem;
+		font-size: 3.1rem;
 	}
 
 	:global(*) {
