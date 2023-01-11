@@ -41,7 +41,7 @@
 			color: var(--text-primary);
 		}
 
-		a:nth-child(1) {
+		a:first-child {
 			padding: 2px 8px 2px 0;
 			border-right: 2.5px solid var(--text-primary);
 		}
