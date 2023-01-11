@@ -2,7 +2,7 @@
 	let files: any;
 </script>
 
-<h1 class="header">Tilføj ny reservedel</h1>
+<h1>Tilføj ny reservedel</h1>
 
 <div id="container">
 	<div id="names">
