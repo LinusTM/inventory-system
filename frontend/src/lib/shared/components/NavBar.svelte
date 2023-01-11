@@ -34,14 +34,14 @@
 	div {
 		display: flex;
 		height: 4rem;
-		background-color: var(--background-medium);
+		background-color: var(--background-secondary);
 		align-items: center;
 		gap: 1rem;
 		padding: 0 max(1rem, 4%);
 
 		* {
 			font-weight: bold;
-			color: var(--text);
+			color: var(--text-primary);
 		}
 	}
 
@@ -63,7 +63,7 @@
 
 	#img {
 		padding: 2px 8px 2px 0;
-		border-right: 2.5px solid var(--text);
+		border-right: 2.5px solid var(--text-primary);
 	}
 
 	#img {
