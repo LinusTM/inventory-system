@@ -42,47 +42,22 @@
 	};
 
 	const columns = [
-		{
-			name: 'FTZ',
-			id: 'ftzNumber'
-		},
-		{
-			name: 'Navn',
-			id: 'altName'
-		},
-		{
-			name: 'Beskrivelse',
-			id: 'description'
-		},
-		{
-			name: 'Sektion',
-			id: 'section'
-		},
-		{
-			name: 'Sektion navn',
-			id: 'sectionName',
-			hidden: true
-		},
-		{
-			name: 'Placerings noter',
-			id: 'placementNotes',
-			hidden: true
-		},
-		{
-			name: 'Mængde',
-			id: 'amount'
-		},
-		{
-			name: 'Billede',
-			id: 'picture',
-			hidden: true
-		}
+		{ name: 'FTZ', id: 'ftzNumber' },
+		{ name: 'Navn', id: 'altName' },
+		{ name: 'Beskrivelse', id: 'description' },
+		{ name: 'Sektion', id: 'section' },
+		{ name: 'Sektion navn', id: 'sectionName', hidden: true },
+		{ name: 'Placerings noter', id: 'placementNotes', hidden: true },
+		{ name: 'Mængde', id: 'amount' },
+		{ name: 'Billede', id: 'picture', hidden: true }
 	];
 
 	// Enableing pagination, and setting entry limit per page to 50.
-	const pagination = {
-		enabled: true,
-		limit: 50
+	const pagination = { enabled: true, summary: false, limit: 50 };
+
+	const language = {
+		pagination: { next: '→', previous: '←' },
+		search: { placeholder: 'Søg...' }
 	};
 </script>
 
@@ -90,7 +65,16 @@
 
 <!-- Defines the container div with the table in it -->
 {#if data.length != 0}
-	<Grid {data} {columns} {className} {pagination} search={true} autoWidth={true} sort={false} />
+	<Grid
+		{data}
+		{columns}
+		{className}
+		{pagination}
+		{language}
+		search={true}
+		autoWidth={true}
+		sort={false}
+	/>
 {:else}
 	<h1 class="header">No data in database</h1>
 {/if}
