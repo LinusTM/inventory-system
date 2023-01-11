@@ -10,8 +10,8 @@
 </script>
 
 <div>
-	<a id="img" href="/"><Zbc /></a>
-	<p id="education">{education}</p>
+	<a href="/"><Zbc /></a>
+	<p>{education}</p>
 	<span />
 
 	<!-- looping throug the navItems object, and putting them all in the navbar -->
@@ -25,12 +25,6 @@
 </div>
 
 <style lang="scss">
-	#education {
-		@media screen and (max-width: 512px) {
-			display: none;
-		}
-	}
-
 	div {
 		position: sticky;
 		top: 0;
@@ -46,6 +40,17 @@
 			font-weight: bold;
 			color: var(--text-primary);
 		}
+
+		a:nth-child(1) {
+			padding: 2px 8px 2px 0;
+			border-right: 2.5px solid var(--text-primary);
+		}
+	}
+
+	p {
+		@media screen and (max-width: 512px) {
+			display: none;
+		}
 	}
 
 	a {
@@ -54,7 +59,7 @@
 		font-size: 1.3rem;
 	}
 
-	a:hover,
+	span ~ a:hover,
 	#selected {
 		border-bottom-width: 2px;
 		border-bottom-style: solid;
@@ -62,14 +67,5 @@
 
 	span {
 		flex: 1 1 auto;
-	}
-
-	#img {
-		padding: 2px 8px 2px 0;
-		border-right: 2.5px solid var(--text-primary);
-	}
-
-	#img {
-		border-bottom: none;
 	}
 </style>
