@@ -32,6 +32,8 @@
 	}
 
 	div {
+		position: sticky;
+		top: 0;
 		display: flex;
 		height: 4rem;
 		background-color: var(--background-secondary);

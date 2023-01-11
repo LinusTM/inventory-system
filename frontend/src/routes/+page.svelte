@@ -109,6 +109,7 @@
 		border-radius: 12px;
 		width: 100%;
 		overflow: hidden;
+		box-shadow: var(--box-shadow);
 	}
 
 	:global(.table-search) {
@@ -127,6 +128,7 @@
 			background-color: var(--background-secondary);
 			border: solid var(--background-quaternary) 2px;
 			height: 2rem;
+			box-shadow: var(--box-shadow);
 		}
 	}
 
