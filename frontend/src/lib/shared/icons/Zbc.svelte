@@ -7,7 +7,7 @@
 	height="31"
 	viewBox="0 0 60 31"
 	xml:space="preserve"
-	><style lang="scss">
+	><style>
 		.st0 {
 			fill: var(--text-primary);
 		}
