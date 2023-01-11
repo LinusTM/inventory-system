@@ -86,16 +86,14 @@
 	};
 </script>
 
-<h1 class="header">Søg på reservedel</h1>
+<h1>Søg på reservedel</h1>
 
 <!-- Defines the container div with the table in it -->
-<div id="container">
-	{#if data.length != 0}
-		<Grid {data} {columns} {className} {pagination} search={true} autoWidth={true} sort={false} />
-	{:else}
-		<h1 class="header">No data in database</h1>
-	{/if}
-</div>
+{#if data.length != 0}
+	<Grid {data} {columns} {className} {pagination} search={true} autoWidth={true} sort={false} />
+{:else}
+	<h1 class="header">No data in database</h1>
+{/if}
 
 <style lang="scss">
 	/* A lot of stuff is selected using the ":global()" modifier,
@@ -163,11 +161,5 @@
 
 	:global(.table-body > th) {
 		text-align: center;
-	}
-
-	/* We are assigning "overflow: auto", in order to make sure that you can scroll
-		 through the table if your screen is too small, or that you are zoomed in */
-	#container {
-		overflow: auto;
 	}
 </style>
