@@ -35,15 +35,8 @@
 		display: flex;
 		height: 4rem;
 
-		@media (prefers-color-scheme: light) {
-			color: var(--text-light);
-			background-color: var(--background-dark);
-		}
-
-		@media (prefers-color-scheme: dark) {
-			color: var(--text);
-			background-color: var(--background-medium);
-		}
+		color: var(--text);
+		background-color: var(--background-medium);
 
 		font-size: 1.05rem;
 		align-items: center;
@@ -62,13 +55,7 @@
 		font-size: 1.3rem;
 		font-weight: 600;
 
-		@media (prefers-color-scheme: light) {
-			color: var(--text-light);
-		}
-
-		@media (prefers-color-scheme: dark) {
-			color: var(--text);
-		}
+		color: var(--text);
 	}
 
 	a:hover,
@@ -83,7 +70,7 @@
 
 	#img {
 		padding: 2px 8px;
-		border-right: 2.5px solid;
+		border-right: 2.5px solid var(--text);
 	}
 
 	#img {
