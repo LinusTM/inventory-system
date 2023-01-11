@@ -55,7 +55,7 @@
 
 			<div id="amount">
 				<label for="amount_input">Mængde</label><br />
-				<input type="number" id="amount_input" /><br />
+				<input type="number" id="amount_input" min="0" /><br />
 			</div>
 		</div>
 	</div>
