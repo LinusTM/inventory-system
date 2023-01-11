@@ -9,7 +9,7 @@
 		education = 'Automekaniker';
 </script>
 
-<div>
+<div class="box-shadow">
 	<a id="img" href="/"><Zbc /></a>
 	<p id="education">{education}</p>
 	<span />
@@ -29,34 +29,26 @@
 		@media screen and (max-width: 512px) {
 			display: none;
 		}
-		margin: 0;
 	}
 
 	div {
 		display: flex;
 		height: 4rem;
-
-		color: var(--text);
 		background-color: var(--background-medium);
-
-		font-size: 1rem;
 		align-items: center;
-		box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
-			0 2px 8px hsla(0, 0%, 0%, 0.05);
+		gap: 1rem;
+		padding: 0 max(1rem, 4%);
 
 		* {
-			margin-right: 1.5em;
-			margin-left: 0.5em;
+			font-weight: bold;
+			color: var(--text);
 		}
 	}
 
 	a {
 		text-decoration: none;
 		transition: all 0.1s ease;
-		font-size: 1.2rem;
-		font-weight: 600;
-
-		color: var(--text);
+		font-size: 1.3rem;
 	}
 
 	a:hover,
@@ -70,16 +62,11 @@
 	}
 
 	#img {
-		padding: 2px 8px;
+		padding: 2px 8px 2px 0;
 		border-right: 2.5px solid var(--text);
 	}
 
 	#img {
 		border-bottom: none;
-	}
-
-	p {
-		margin-left: 0;
-		font-weight: bold;
 	}
 </style>

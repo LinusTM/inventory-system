@@ -69,7 +69,7 @@
 	:root {
 		@media (prefers-color-scheme: light) {
 			--background: hsl(0, 0%, 100%);
-			--background-medium: hsl(0, 0%, 96%);
+			--background-medium: hsl(13, 20%, 96%);
 			--background-dark: hsl(0, 0%, 11%);
 			--background-grayish: hsl(0, 0%, 40%);
 			--text: hsl(0, 0%, 0%);
@@ -77,8 +77,8 @@
 		}
 
 		@media (prefers-color-scheme: dark) {
-			--background: hsl(0, 0%, 10%);
-			--background-medium: hsl(0, 0%, 16%);
+			--background: hsl(13, 3%, 11%);
+			--background-medium: hsl(13, 3%, 16%);
 			--background-dark: hsl(0, 0%, 98%);
 			--background-grayish: hsl(0, 0%, 60%);
 			--text: hsl(0, 0%, 100%);
@@ -95,7 +95,6 @@
 
 	/* LINKS */
 	:global(a:visited, a:link) {
-		color: var(--text-light);
 		text-decoration: none;
 	}
 
@@ -105,8 +104,8 @@
 
 	/* SHADOWS */
 	:global(.box-shadow) {
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-			0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12);
+		box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
+			0 2px 8px hsla(0, 0%, 0%, 0.05);
 	}
 
 	/* CONTAINER */
@@ -152,7 +151,7 @@
 		text-align: center;
 		margin-bottom: 2rem;
 		margin-top: 0;
-		font-size: 3.1rem;
+		font-size: 3.25rem;
 	}
 
 	:global(*) {
