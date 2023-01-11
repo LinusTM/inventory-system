@@ -56,9 +56,11 @@
 			github.com/LinusTM/inventory-system
 		</a>
 		<br />
-		<p>
+		<br />
+
+		<h3>
 			<i>ZBC Ringsted: 2022 - {new Date().getFullYear()}</i>
-		</p>
+		</h3>
 	</footer>
 </div>
 
@@ -133,30 +135,15 @@
 	}
 
 	footer {
-		@media (prefers-color-scheme: light) {
-			background-color: var(--background-dark);
-			color: var(--text-light);
+		background-color: var(--background-medium);
+		color: var(--text);
 
-			a {
-				color: var(--text-light);
-			}
-
-			a:hover {
-				border-bottom: 2px solid var(--text-light);
-			}
+		a {
+			color: var(--text);
 		}
 
-		@media (prefers-color-scheme: dark) {
-			background-color: var(--background-medium);
-			color: var(--text);
-
-			a {
-				color: var(--text);
-			}
-
-			a:hover {
-				border-bottom: 2px solid var(--text);
-			}
+		a:hover {
+			border-bottom: 2px solid var(--text);
 		}
 	}
 
