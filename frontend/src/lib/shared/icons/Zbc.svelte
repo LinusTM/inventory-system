@@ -9,7 +9,7 @@
 	xml:space="preserve"
 	><style lang="scss">
 		.st0 {
-			fill: var(--text);
+			fill: var(--text-primary);
 		}
 	</style><path
 		class="st0"

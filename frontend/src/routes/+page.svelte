@@ -103,7 +103,7 @@
 
 	/* TABLE */
 	:global(.table) {
-		border: solid var(--background-grayish) 2px;
+		border: solid var(--background-quaternary) 2px;
 		margin: 0;
 		border-spacing: 0;
 		border-radius: 12px;
@@ -123,9 +123,9 @@
 			font-size: 0.8rem;
 			width: min(400px + 40%, 100%);
 			border-radius: 6px;
-			color: var(--text);
-			background-color: var(--background-medium);
-			border: solid var(--background-grayish) 2px;
+			color: var(--text-primary);
+			background-color: var(--background-secondary);
+			border: solid var(--background-quaternary) 2px;
 			height: 2rem;
 		}
 	}
@@ -150,13 +150,13 @@
 	}
 
 	:global(.table-body > tr:nth-child(odd)) {
-		background-color: var(--background-medium);
+		background-color: var(--background-secondary);
 		color: var(--text-dark);
 	}
 
 	:global(.table-body > tr:hover) {
-		background-color: var(--background-grayish);
-		color: var(--text-light);
+		background-color: var(--background-quaternary);
+		color: var(--text-secondary);
 	}
 
 	:global(.table-body > th) {

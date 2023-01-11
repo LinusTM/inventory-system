@@ -68,21 +68,21 @@
 	/* COLORS */
 	:root {
 		@media (prefers-color-scheme: light) {
-			--background: hsl(0, 0%, 100%);
-			--background-medium: hsl(13, 20%, 96%);
-			--background-dark: hsl(0, 0%, 11%);
-			--background-grayish: hsl(0, 0%, 40%);
-			--text: hsl(0, 0%, 0%);
-			--text-light: hsl(0, 0%, 100%);
+			--background-primary: hsl(0, 0%, 100%);
+			--background-secondary: hsl(13, 20%, 96%);
+			--background-tertiary: hsl(0, 0%, 11%);
+			--background-quaternary: hsl(0, 0%, 40%);
+			--text-primary: hsl(0, 0%, 0%);
+			--text-secondary: hsl(0, 0%, 100%);
 		}
 
 		@media (prefers-color-scheme: dark) {
-			--background: hsl(13, 3%, 11%);
-			--background-medium: hsl(13, 3%, 16%);
-			--background-dark: hsl(0, 0%, 98%);
-			--background-grayish: hsl(0, 0%, 60%);
-			--text: hsl(0, 0%, 100%);
-			--text-light: hsl(0, 0%, 0%);
+			--background-primary: hsl(13, 3%, 11%);
+			--background-secondary: hsl(13, 3%, 16%);
+			--background-tertiary: hsl(0, 0%, 98%);
+			--background-quaternary: hsl(0, 0%, 60%);
+			--text-primary: hsl(0, 0%, 100%);
+			--text-secondary: hsl(0, 0%, 0%);
 		}
 	}
 
@@ -90,7 +90,7 @@
 	:global(body, html) {
 		margin: 0 auto;
 		padding: 0 auto;
-		background-color: var(--background);
+		background-color: var(--background-primary);
 	}
 
 	/* LINKS */
@@ -113,8 +113,8 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		background-color: var(--background);
-		color: var(--text);
+		background-color: var(--background-primary);
+		color: var(--text-primary);
 	}
 
 	/* CONTENT */
@@ -134,15 +134,15 @@
 	}
 
 	footer {
-		background-color: var(--background-medium);
-		color: var(--text);
+		background-color: var(--background-secondary);
+		color: var(--text-primary);
 
 		a {
-			color: var(--text);
+			color: var(--text-primary);
 		}
 
 		a:hover {
-			border-bottom: 2px solid var(--text);
+			border-bottom: 2px solid var(--text-primary);
 		}
 	}
 

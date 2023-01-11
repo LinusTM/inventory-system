@@ -107,15 +107,15 @@
 
 	#image_select label,
 	button {
-		background-color: var(--background-medium);
-		color: var(--text);
+		background-color: var(--background-secondary);
+		color: var(--text-primary);
 		transition: background-color 0.1s ease, color 0.1s linear;
 	}
 
 	#image_select label:hover,
 	button:hover {
-		background-color: var(--background-dark);
-		color: var(--text-light);
+		background-color: var(--background-tertiary);
+		color: var(--text-secondary);
 	}
 
 	#names {
@@ -146,13 +146,13 @@
 	}
 
 	input {
-		color: var(--text);
+		color: var(--text-primary);
 		font-size: 1rem;
 		border: none;
 		height: 2rem;
 		width: 9rem;
-		background-color: var(--background-medium);
-		border-bottom: 2px solid var(--text);
+		background-color: var(--background-secondary);
+		border-bottom: 2px solid var(--text-primary);
 		appearance: textfield;
 		margin-bottom: 2em;
 	}
@@ -169,12 +169,12 @@
 
 	textarea {
 		border: none;
-		background-color: var(--background-medium);
-		border-bottom: 2px solid var(--text);
+		background-color: var(--background-secondary);
+		border-bottom: 2px solid var(--text-primary);
 		resize: none;
 		width: 16.5rem;
 		height: 8rem;
-		color: var(--text);
+		color: var(--text-primary);
 		font-size: 1rem;
 	}
 
