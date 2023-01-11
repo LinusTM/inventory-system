@@ -4,7 +4,7 @@
 
 	const navItems = [
 			{ label: 'ADMIN', href: '/admin' },
-			{ label: 'SØG', href: '/' }
+			{ label: 'SØG', href: '/' },
 		],
 		education = 'Automekaniker';
 </script>

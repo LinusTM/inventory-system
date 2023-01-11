@@ -38,7 +38,7 @@
 		tbody: 'table-body',
 		td: 'table-td',
 		th: 'table-th',
-		search: 'table-search'
+		search: 'table-search',
 	};
 
 	const columns = [
@@ -49,7 +49,7 @@
 		{ name: 'Sektion navn', id: 'sectionName', hidden: true },
 		{ name: 'Placerings noter', id: 'placementNotes', hidden: true },
 		{ name: 'Mængde', id: 'amount' },
-		{ name: 'Billede', id: 'picture', hidden: true }
+		{ name: 'Billede', id: 'picture', hidden: true },
 	];
 
 	// Enableing pagination, and setting entry limit per page to 50.
@@ -57,7 +57,7 @@
 
 	const language = {
 		pagination: { next: '→', previous: '←' },
-		search: { placeholder: 'Søg...' }
+		search: { placeholder: 'Søg...' },
 	};
 </script>
 
