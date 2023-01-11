@@ -27,9 +27,9 @@
 	<NavBar />
 
 	<!-- Page content -->
-	<div id="content">
+	<main>
 		<slot />
-	</div>
+	</main>
 
 	<!-- Footer -->
 	<footer>
@@ -101,7 +101,7 @@
 		text-decoration: none;
 	}
 
-	:global(a svg) {
+	:global(svg) {
 		vertical-align: text-bottom;
 	}
 
@@ -115,7 +115,7 @@
 	}
 
 	/* CONTENT */
-	#content {
+	main {
 		align-self: center;
 		margin: 4rem 6rem;
 		font-size: 1.2rem;
