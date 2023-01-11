@@ -12,6 +12,10 @@
 			: $page.url.pathname.substring(1).toUpperCase()}</title
 	>
 
+	<!-- favicon -->
+	<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
+	<link rel="icon" type="image/png" href="%sveltekit.assets%/favicon.png" />
+
 	<!-- fonts  -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -98,7 +102,7 @@
 		flex: 1;
 		width: min(800px + 30%, 98%);
 
-		:global(h1:nth-of-type(1)) {
+		:global(h1:first-of-type) {
 			text-align: center;
 			margin-bottom: 2rem;
 			margin-top: 0;
