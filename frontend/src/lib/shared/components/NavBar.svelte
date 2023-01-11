@@ -9,7 +9,7 @@
 		education = 'Automekaniker';
 </script>
 
-<div class="box-shadow">
+<div>
 	<a id="img" href="/"><Zbc /></a>
 	<p id="education">{education}</p>
 	<span />
@@ -37,7 +37,8 @@
 		background-color: var(--background-secondary);
 		align-items: center;
 		gap: 1rem;
-		padding: 0 max(1rem, 4%);
+		padding: 0 max(1rem, 3%);
+		box-shadow: var(--box-shadow);
 
 		* {
 			font-weight: bold;

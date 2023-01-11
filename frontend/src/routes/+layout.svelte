@@ -65,7 +65,7 @@
 </div>
 
 <style lang="scss">
-	/* COLORS */
+	/* VARIABLES */
 	:root {
 		@media (prefers-color-scheme: light) {
 			--background-primary: hsl(0, 0%, 100%);
@@ -84,6 +84,9 @@
 			--text-primary: hsl(0, 0%, 100%);
 			--text-secondary: hsl(0, 0%, 0%);
 		}
+
+		--box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
+			0 2px 8px hsla(0, 0%, 0%, 0.05);
 	}
 
 	/* GENERAL TAGS */
@@ -100,12 +103,6 @@
 
 	:global(a svg) {
 		vertical-align: text-bottom;
-	}
-
-	/* SHADOWS */
-	:global(.box-shadow) {
-		box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
-			0 2px 8px hsla(0, 0%, 0%, 0.05);
 	}
 
 	/* CONTAINER */
@@ -147,11 +144,10 @@
 	}
 
 	:global(.header) {
-		display: block;
 		text-align: center;
 		margin-bottom: 2rem;
 		margin-top: 0;
-		font-size: 3.25rem;
+		font-size: 3.1rem;
 	}
 
 	:global(*) {
