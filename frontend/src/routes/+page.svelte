@@ -29,36 +29,34 @@
 
 	// Creates an array with a length of 1000, filled with random data.
 	// Currently used for testing purposes.
-	const data: any = Array.from({ length: 1000 }, () => new Entry());
-
-	// We are assigning parts of the table to classes, so that we can modify the styling.
-	const className = {
-		table: 'table',
-		header: 'table-header',
-		tbody: 'table-body',
-		td: 'table-td',
-		th: 'table-th',
-		search: 'table-search',
-	};
-
-	const columns = [
-		{ name: 'FTZ', id: 'ftzNumber' },
-		{ name: 'Navn', id: 'altName' },
-		{ name: 'Beskrivelse', id: 'description' },
-		{ name: 'Sektion', id: 'section' },
-		{ name: 'Sektion navn', id: 'sectionName', hidden: true },
-		{ name: 'Placerings noter', id: 'placementNotes', hidden: true },
-		{ name: 'Mængde', id: 'amount' },
-		{ name: 'Billede', id: 'picture', hidden: true },
-	];
-
-	// Enableing pagination, and setting entry limit per page to 50.
-	const pagination = { enabled: true, summary: false, limit: 50 };
-
-	const language = {
-		pagination: { next: '→', previous: '←' },
-		search: { placeholder: 'Søg...' },
-	};
+	const data: any = Array.from({ length: 1000 }, () => new Entry()),
+		// We are assigning parts of the table to classes, so that we can modify the styling.
+		className = {
+			table: 'table',
+			header: 'table-header',
+			tbody: 'table-body',
+			td: 'table-td',
+			th: 'table-th',
+			search: 'table-search',
+		},
+		// Choosing which columns are shown, what name they should have.
+		columns = [
+			{ name: 'FTZ', id: 'ftzNumber' },
+			{ name: 'Navn', id: 'altName' },
+			{ name: 'Beskrivelse', id: 'description' },
+			{ name: 'Sektion', id: 'section' },
+			{ name: 'Sektion navn', id: 'sectionName', hidden: true },
+			{ name: 'Placerings noter', id: 'placementNotes', hidden: true },
+			{ name: 'Mængde', id: 'amount' },
+			{ name: 'Billede', id: 'picture', hidden: true },
+		],
+		// Enableing pagination, and setting entry limit per page to 50.
+		pagination = { enabled: true, summary: false, limit: 50 },
+		// Changing the default text to customized ones.
+		language = {
+			pagination: { next: '→', previous: '←' },
+			search: { placeholder: 'Søg...' },
+		};
 </script>
 
 <h1>Søg på reservedel</h1>
