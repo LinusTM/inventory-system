@@ -14,12 +14,10 @@
 		<label for="description-input">Beskrivelse af reservedel</label>
 		<textarea id="description-input" />
 		<label for="chosen-image">Tilføj billede</label>
-		<div id="image-select">
-			<input type="file" id="chosen-image" bind:files hidden />
-			{#if files && files[0]}
-				{files[0].name.replace(/(.{12})..+/, '$1…')}
-			{/if}
-		</div>
+		<input type="file" id="chosen-image" bind:files hidden />
+		{#if files && files[0]}
+			{files[0].name.replace(/(.{12})..+/, '$1…')}
+		{/if}
 		<button type="button">Tilføj reservedel til inventar</button>
 	</div>
 
