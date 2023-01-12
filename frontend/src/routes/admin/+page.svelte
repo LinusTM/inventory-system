@@ -14,7 +14,7 @@
 		<label for="description-input">Beskrivelse af reservedel</label>
 		<textarea id="description-input" />
 		<label for="chosen-image">Tilføj billede</label>
-		<input type="file" id="chosen-image" bind:files hidden />
+		<input type="file" accept="image/*" id="chosen-image" bind:files hidden />
 		{#if files && files[0]}
 			{#if files[0].size > 3145728}
 				File is too big. (Must be less than 3mb)
@@ -70,7 +70,6 @@
 		border-bottom: 2px solid var(--text-primary);
 	}
 
-	label[for='chosen-image'],
 	button {
 		background-color: var(--background-secondary);
 		color: var(--text-primary);
@@ -88,6 +87,7 @@
 	}
 
 	label[for='chosen-image'] {
+		@extend button;
 		padding: 0.65rem 1rem;
 	}
 
