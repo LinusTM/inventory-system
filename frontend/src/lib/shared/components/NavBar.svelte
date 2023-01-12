@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Zbc from '../icons/Zbc.svelte';
+	import Zbc from '$lib/shared/icons/Zbc.svelte';
 
 	const navItems = [
 			{ label: 'ADMIN', href: '/admin' },
@@ -66,6 +66,6 @@
 	}
 
 	span {
-		flex: 1 1 auto;
+		flex-grow: 1;
 	}
 </style>

@@ -5,7 +5,7 @@
 <h1>Tilføj ny reservedel</h1>
 
 <div id="container">
-	<div id="names">
+	<div>
 		<h2>Beskrivelse</h2>
 		<div id="ftz_number">
 			<label for="ftz_number_input">FTZ nummer</label><br />
@@ -35,28 +35,26 @@
 		<button type="button">Tilføj reservedel til inventar</button>
 	</div>
 
-	<div id="placement">
+	<div>
 		<h2>Placering</h2>
-		<div id="placement_box">
-			<div id="section">
-				<label for="section_input">Sektion</label><br />
-				<input type="text" id="alt_name_input" />
-			</div>
+		<div id="section">
+			<label for="section_input">Sektion</label><br />
+			<input type="text" id="alt_name_input" />
+		</div>
 
-			<div id="name">
-				<label for="name_input">Evt. sektion navn</label><br />
-				<input type="text" id="alt_name_input" />
-			</div>
+		<div id="name">
+			<label for="name_input">Evt. sektion navn</label><br />
+			<input type="text" id="alt_name_input" />
+		</div>
 
-			<div id="note">
-				<label for="note_input">Note til placering</label><br />
-				<textarea id="description_input" />
-			</div>
+		<div id="note">
+			<label for="note_input">Note til placering</label><br />
+			<textarea id="description_input" />
+		</div>
 
-			<div id="amount">
-				<label for="amount_input">Mængde</label><br />
-				<input type="number" id="amount_input" min="0" /><br />
-			</div>
+		<div id="amount">
+			<label for="amount_input">Mængde</label><br />
+			<input type="number" id="amount_input" min="0" /><br />
 		</div>
 	</div>
 </div>
@@ -64,37 +62,9 @@
 <style lang="scss">
 	#container {
 		display: grid;
-	}
-
-	@media screen and (max-width: 796px) {
-		#container {
-			grid-template-areas:
-				'placement'
-				'names';
-		}
-
-		#container > div {
-			margin: 0 Min(25%, 20% + 100px);
-		}
-
-		#names h2 {
-			padding-top: 3rem;
-		}
-	}
-
-	@media screen and (min-width: 797px) {
-		#container {
-			grid-template-areas: 'names placement';
-		}
-
-		#placement {
-			margin-left: 8rem;
-		}
-
-		#names {
-			justify-self: end;
-			width: Min(98%, 25% + 200px);
-		}
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		margin-left: min(300px + 10%, 20%);
+		column-gap: 15%;
 	}
 
 	#image_select label {
@@ -116,10 +86,6 @@
 	button:hover {
 		background-color: var(--background-tertiary);
 		color: var(--text-secondary);
-	}
-
-	#names {
-		grid-area: names;
 	}
 
 	#description {
