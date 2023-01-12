@@ -13,11 +13,11 @@
 		<input type="text" id="alt-name-input" />
 		<label for="description-input">Beskrivelse af reservedel</label>
 		<textarea id="description-input" />
-		<label for="chosen-image">Tilføj billede</label>
-		<input type="file" accept="image/*" id="chosen-image" bind:files hidden />
+		<label for="image-selector">Tilføj billede</label>
+		<input type="file" accept="image/*" id="image-selector" bind:files hidden />
 		{#if files && files[0]}
 			{#if files[0].size > 3145728}
-				File is too big. (Must be less than 3mb)
+				File is too big. (Must be smaller than 3mb)
 			{:else}
 				{files[0].name.replace(/(.{12})..+/, '$1…')}
 			{/if}
@@ -57,7 +57,7 @@
 	}
 
 	:not(label),
-	label[for='chosen-image'] {
+	label[for='image-selector'] {
 		margin-bottom: 1.5rem;
 	}
 
@@ -86,7 +86,7 @@
 		}
 	}
 
-	label[for='chosen-image'] {
+	label[for='image-selector'] {
 		@extend button;
 		padding: 0.65rem 1rem;
 	}

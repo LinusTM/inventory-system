@@ -96,13 +96,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: 2rem 1rem;
+		margin: 2rem 0;
 
 		:global(input) {
 			outline: none;
 			border: none;
 			font-size: 0.8rem;
-			width: min(400px + 40%, 100%);
+			width: calc(400px + 35%);
 			border-radius: 6px;
 			color: var(--text-primary);
 			background-color: var(--background-secondary);
