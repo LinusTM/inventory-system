@@ -43,26 +43,33 @@
 
 		a:first-child {
 			padding: 2px 8px 2px 0;
-			border-right: 2.5px solid var(--text-primary);
+			border-right: 2px solid;
 		}
 	}
 
-	@media screen and (max-width: 512px) {
-		p {
+	p {
+		@media screen and (max-width: 512px) {
 			display: none;
 		}
+
+		&::before {
+			content: '[';
+		}
+
+		&::after {
+			content: ']';
+		}
 	}
 
-	a {
+	span ~ a {
 		text-decoration: none;
 		transition: all 0.1s ease;
 		font-size: 1.3rem;
-	}
 
-	span ~ a:hover,
-	#selected {
-		border-bottom-width: 2px;
-		border-bottom-style: solid;
+		&:hover,
+		&#selected {
+			border-bottom: 2px solid;
+		}
 	}
 
 	span {
