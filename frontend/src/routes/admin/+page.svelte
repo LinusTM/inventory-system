@@ -16,7 +16,11 @@
 		<label for="chosen-image">Tilføj billede</label>
 		<input type="file" id="chosen-image" bind:files hidden />
 		{#if files && files[0]}
-			{files[0].name.replace(/(.{12})..+/, '$1…')}
+			{#if files[0].size > 3145728}
+				File is too big. (Must be less than 3mb)
+			{:else}
+				{files[0].name.replace(/(.{12})..+/, '$1…')}
+			{/if}
 		{/if}
 		<button type="button">Tilføj reservedel til inventar</button>
 	</div>
