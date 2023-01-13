@@ -38,9 +38,6 @@
 	footer {
 		padding: 1.5em;
 		font-size: 1rem;
-	}
-
-	footer {
 		background-color: var(--background-secondary);
 		color: var(--text-primary);
 
