@@ -62,7 +62,7 @@
 <h1>Søg på reservedel</h1>
 
 <!-- Defines the container div with the table in it -->
-{#if data.length != 0}
+{#if data.length !== 0}
 	<Grid
 		{data}
 		{columns}

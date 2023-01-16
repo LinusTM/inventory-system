@@ -1,8 +1,6 @@
 using InventoryAPI.Model;
 using InventoryAPI.Controllers;
 
-
-
 using var db = new InventoryContext();
 
 db.SaveChanges();

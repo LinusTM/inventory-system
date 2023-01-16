@@ -9,40 +9,35 @@ namespace InventoryAPI.Controllers;
 public class InventoryController : ControllerBase
 {
     private readonly InventoryContext _context;
-    public InventoryController(InventoryContext context)
-    {
-        _context = context;
-    }
+    public InventoryController(InventoryContext context) => _context = context;
+
 
     // GET api/inventory/get/all
     [HttpGet("get/all")]
     public async Task<ActionResult<IEnumerable<InventoryItem>>> GetAllInventory()
-    {
-        return await _context.Inventory.ToListAsync();
-    }
+    => await _context.Inventory.ToListAsync();
+
 
     // GET api/inventory/get/{amount}
     [HttpGet("get/{amount}")]
     public async Task<ActionResult<IEnumerable<InventoryItem>>> GetInventoryByAmount(int amount)
-    {
-        return await _context.Inventory
+    => await _context.Inventory
             .Where(i => i.Amount == amount)
             .ToListAsync();
-    }
+
 
     // GET api/inventory/get/{query}
     [HttpGet("get/{query}")]
     public async Task<ActionResult<IEnumerable<InventoryItem>>> GetInventoryByQuery(string query)
-    {
-        return await _context.Inventory
-                    .Where(i => i.FtzNumber.Contains(query) ||
-                                i.AltName.Contains(query) ||
-                                i.Description.Contains(query) ||
-                                i.Section.Contains(query) ||
-                                i.SectionName.Contains(query) ||
-                                i.PlacementNotes.Contains(query))
-                    .ToListAsync();
-    }
+    => await _context.Inventory
+                .Where(i => i.FtzNumber.Contains(query) ||
+                            i.AltName.Contains(query) ||
+                            i.Description.Contains(query) ||
+                            i.Section.Contains(query) ||
+                            i.SectionName.Contains(query) ||
+                            i.PlacementNotes.Contains(query))
+                .ToListAsync();
+
 
     // PUT api/inventory/put/add
     [HttpPut("put/add")]
