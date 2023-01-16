@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Email from '$lib/shared/icons/Email.svelte';
-	import Github from '$lib/shared/icons/Github.svelte';
+	import Email from '$lib/icons/Email.svelte';
+	import Github from '$lib/icons/Github.svelte';
 </script>
 
 <footer>

@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Zbc from '$lib/shared/icons/Zbc.svelte';
+	import Zbc from '$lib/icons/Zbc.svelte';
 
 	const navItems = [
 			{ label: 'ADMIN', href: '/admin' },

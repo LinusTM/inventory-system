@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Entry } from '$lib/shared/ts/entry';
+	import { Entry } from '$lib/ts/entry';
 	import Grid from 'gridjs-svelte';
 	import Modal from 'svelte-simple-modal';
 

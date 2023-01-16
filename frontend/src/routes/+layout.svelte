@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import NavBar from '$lib/shared/components/NavBar.svelte';
-	import Footer from '$lib/shared/components/Footer.svelte';
+	import NavBar from '$lib/components/NavBar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <svelte:head>
