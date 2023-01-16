@@ -72,7 +72,7 @@
 	}
 
 	/* links */
-	:global(a:visited, a:link) {
+	:global(a:any-link) {
 		text-decoration: none;
 	}
 

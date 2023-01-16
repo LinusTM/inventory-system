@@ -96,7 +96,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: 2rem 0;
+		margin-block: 2rem;
 
 		:global(input) {
 			outline: none;

@@ -41,9 +41,9 @@
 <style lang="scss">
 	#container {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		margin-left: min(300px + 10%, 20%);
-		column-gap: 10%;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		margin-left: calc(50px + 15%);
+		row-gap: 2rem;
 
 		div {
 			display: flex;

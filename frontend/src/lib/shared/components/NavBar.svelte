@@ -33,7 +33,7 @@
 		background-color: var(--background-secondary);
 		align-items: center;
 		gap: 1rem;
-		padding: 0 max(1rem, 3%);
+		padding-inline: max(3% + 0.5rem, 1rem);
 		box-shadow: var(--box-shadow);
 
 		* {
