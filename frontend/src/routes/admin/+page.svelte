@@ -16,11 +16,13 @@
 		<label for="image-selector">Tilføj billede</label>
 		<input type="file" accept="image/*" id="image-selector" bind:files hidden />
 		{#if files && files[0]}
-			{#if files[0].size > 3145728}
-				File is too big. (Must be smaller than 3mb)
-			{:else}
-				{files[0].name.replace(/(.{12})..+/, '$1…')}
-			{/if}
+			<p>
+				{#if files[0].size > 3145728}
+					File is too big. (Must be smaller than 3mb)
+				{:else}
+					{files[0].name.replace(/(.{12})..+/, '$1…')}
+				{/if}
+			</p>
 		{/if}
 		<button type="button">Tilføj reservedel til inventar</button>
 	</div>
@@ -49,11 +51,11 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-
-			:not(h2) {
-				font-size: 1.1rem;
-			}
 		}
+	}
+
+	:not(h2) {
+		font-size: 1.1rem;
 	}
 
 	:not(label),
@@ -88,7 +90,7 @@
 
 	label[for='image-selector'] {
 		@extend button;
-		padding: 0.65rem 1rem;
+		padding-block: 0.65rem;
 	}
 
 	textarea {

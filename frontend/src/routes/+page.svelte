@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Entry } from '$lib/ts/entry';
 	import Grid from 'gridjs-svelte';
-	import Modal from 'svelte-simple-modal';
+	import { h, PluginPosition } from 'gridjs';
+	import PopupContent from '$lib/components/PopupContent.svelte';
 
 	// Creates an array with a length of 1000, filled with random entries.
 	// Currently used for testing purposes.
