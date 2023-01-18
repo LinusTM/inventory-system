@@ -9,7 +9,7 @@
 		education = 'Automekaniker';
 </script>
 
-<div>
+<header>
 	<a href="/"><Zbc /></a>
 	<p>{education}</p>
 	<span />
@@ -22,10 +22,10 @@
 			<a href={navItem.href}>{navItem.label}</a>
 		{/if}
 	{/each}
-</div>
+</header>
 
 <style lang="scss">
-	div {
+	header {
 		position: sticky;
 		top: 0;
 		display: flex;
