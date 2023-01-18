@@ -12,10 +12,6 @@
 			: $page.url.pathname.substring(1).toUpperCase()}</title
 	>
 
-	<!-- favicon -->
-	<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/favicon.svg" />
-	<link rel="icon" type="image/png" href="%sveltekit.assets%/favicon.png" />
-
 	<!-- fonts  -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />

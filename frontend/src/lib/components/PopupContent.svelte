@@ -3,3 +3,6 @@
 </script>
 
 <p>{message}</p>
+
+<style lang="scss">
+</style>

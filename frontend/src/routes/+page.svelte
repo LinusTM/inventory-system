@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { Entry } from '$lib/ts/entry';
 	import Grid from 'gridjs-svelte';
+	import PopupButton from '$lib/components/PopupButton.svelte';
+	import Modal from 'svelte-simple-modal';
 
-	// Creates an array with a length of 1000, filled with random entries.
-	// Currently used for testing purposes.
 	const data: any = Array.from({ length: 1000 }, () => new Entry()),
-		// We are assigning parts of the table to classes, so that we can modify the styling.
 		className = {
 			table: 'table',
 			header: 'table-header',
@@ -14,7 +13,6 @@
 			th: 'table-th',
 			search: 'table-search',
 		},
-		// Choosing which columns are shown, what name they should have.
 		columns = [
 			{ name: 'FTZ', id: 'ftzNumber' },
 			{ name: 'Navn', id: 'altName' },
@@ -25,9 +23,7 @@
 			{ name: 'Mængde', id: 'amount' },
 			{ name: 'Billede', id: 'picture', hidden: true },
 		],
-		// Enableing pagination, and setting entry limit per page to 50.
 		pagination = { enabled: true, summary: false, limit: 50 },
-		// Changing the default text to customized ones.
 		language = {
 			pagination: { next: '→', previous: '←' },
 			search: { placeholder: 'Søg...' },
@@ -35,6 +31,10 @@
 </script>
 
 <h1>Søg på reservedel</h1>
+
+<Modal>
+	<PopupButton />
+</Modal>
 
 <!-- Defines the container div with the table in it -->
 {#if data.length !== 0}
