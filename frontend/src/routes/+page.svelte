@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Entry } from '$lib/ts/entry';
+	import PopupComponent from '$lib/components/PopupComponent.svelte';
 	import Grid from 'gridjs-svelte';
-	import PopupButton from '$lib/components/PopupButton.svelte';
-	import Modal from 'svelte-simple-modal';
+	import { SvelteWrapper } from 'gridjs-svelte/plugins';
 
 	const data: any = Array.from({ length: 1000 }, () => new Entry()),
 		className = {
@@ -22,6 +22,16 @@
 			{ name: 'Placerings noter', id: 'placementNotes', hidden: true },
 			{ name: 'Mængde', id: 'amount' },
 			{ name: 'Billede', id: 'picture', hidden: true },
+			{
+				name: 'Handlinger',
+				data: (cell: any) => cell,
+				plugin: {
+					component: SvelteWrapper,
+					props: {
+						component: PopupComponent,
+					},
+				},
+			},
 		],
 		pagination = { enabled: true, summary: false, limit: 50 },
 		language = {
@@ -31,10 +41,6 @@
 </script>
 
 <h1>Søg på reservedel</h1>
-
-<Modal>
-	<PopupButton />
-</Modal>
 
 <!-- Defines the container div with the table in it -->
 {#if data.length !== 0}
