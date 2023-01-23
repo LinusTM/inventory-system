@@ -1,5 +1,17 @@
 <script lang="ts">
 	let files: any;
+
+	import { slide } from 'svelte/transition';
+
+	function checkValidity(file: any) {
+		if (file) {
+			if (file[0].size > 3145728) {
+				return 'error';
+			}
+			return 'success';
+		}
+		return null;
+	}
 </script>
 
 <h1>Tilføj ny reservedel</h1>
@@ -13,18 +25,23 @@
 		<input type="text" id="alt-name-input" />
 		<label for="description-input">Beskrivelse af reservedel</label>
 		<textarea id="description-input" />
-		<label for="image-selector">Tilføj billede</label>
+		<label class={checkValidity(files)} for="image-selector">Tilføj billede</label>
 		<input type="file" accept="image/*" id="image-selector" bind:files hidden />
-		{#if files && files[0]}
-			<p>
+		{#if checkValidity(files)}
+			<p transition:slide>
 				{#if files[0].size > 3145728}
-					File is too big. (Must be smaller than 3mb)
+					File is too big. (Must be smaller than 3MB)
 				{:else}
 					{files[0].name.replace(/(.{12})..+/, '$1…')}
 				{/if}
 			</p>
 		{/if}
-		<button type="button">Tilføj reservedel til inventar</button>
+
+		{#if checkValidity(files) === 'error'}
+			<button type="button" class="disabled" disabled>Tilføj reservedel til inventar</button>
+		{:else}
+			<button type="button">Tilføj reservedel til inventar</button>
+		{/if}
 	</div>
 
 	<div>
@@ -96,6 +113,16 @@
 			background-color: var(--accent-tertiary);
 			color: var(--accent-text);
 		}
+
+		&.disabled {
+			cursor: not-allowed;
+			border-color: var(--background-secondary);
+
+			&:hover {
+				background-color: var(--background-secondary);
+				color: var(--text-primary);
+			}
+		}
 	}
 
 	label[for='image-selector'] {
@@ -106,6 +133,23 @@
 		&:hover {
 			background-color: var(--background-quaternary);
 			color: var(--text-secondary);
+		}
+
+		&.error {
+			border: 2px solid var(--accent-error);
+
+			&:hover {
+				background-color: var(--accent-error);
+				color: var(--accent-text);
+			}
+		}
+		&.success {
+			border: 2px solid var(--accent-primary);
+
+			&:hover {
+				background-color: var(--accent-primary);
+				color: var(--accent-text);
+			}
 		}
 	}
 

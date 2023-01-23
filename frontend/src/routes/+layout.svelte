@@ -58,6 +58,7 @@
 		--accent-primary: hsl(256, 34%, 48%);
 		--accent-secondary: hsl(342, 25%, 61%);
 		--accent-tertiary: hsl(123, 50%, 45%);
+		--accent-error: hsl(0, 65%, 46%);
 		--accent-text: hsl(0, 0%, 100%);
 
 		--box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
@@ -104,10 +105,17 @@
 		width: min(800px + 30%, 98%);
 
 		:global(h1:first-of-type) {
+			@media (min-width: 511px) {
+				font-size: 2.55rem;
+			}
+
+			@media (max-width: 512px) {
+				font-size: 2rem;
+			}
+
 			text-align: center;
 			margin-bottom: 2rem;
 			margin-top: 0;
-			font-size: 3rem;
 		}
 	}
 </style>

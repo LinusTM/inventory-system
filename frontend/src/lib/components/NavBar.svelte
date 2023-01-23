@@ -44,6 +44,12 @@
 		a:first-child {
 			padding: 2px 8px 2px 0;
 			border-right: 2px solid;
+			transition: 0.2s ease;
+
+			&:hover {
+				border-right: none;
+				padding-inline: 0;
+			}
 		}
 	}
 
