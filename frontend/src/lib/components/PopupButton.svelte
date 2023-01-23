@@ -14,10 +14,12 @@
 			PopupContent,
 			{ data: data },
 			{
+				unstyled: true,
 				closeButton: CloseButton,
 				styleWindow: {
 					background: 'var(--background-secondary);',
-					width: '75%',
+					minWidth: '70%',
+					maxWidth: '100%',
 					marginTop: '-1rem',
 				},
 				styleContent: {
@@ -36,10 +38,18 @@
 
 <style lang="scss">
 	button {
-		background-color: #66bb6a;
+		background-color: var(--background-secondary);
+		color: var(--text-primary);
+		font-size: 0.75rem;
 		border-radius: 5px;
-		border: none;
+		border: 2px solid var(--accent-primary);
 		cursor: pointer;
 		box-shadow: var(--box-shadow);
+		transition: background-color 0.2s ease, color 0.2s linear;
+
+		&:hover {
+			background-color: var(--accent-primary);
+			color: var(--accent-text);
+		}
 	}
 </style>

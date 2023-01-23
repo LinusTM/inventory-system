@@ -40,6 +40,7 @@
 		font-size: 1rem;
 		background-color: var(--background-secondary);
 		color: var(--text-primary);
+		transition: all ease;
 
 		a {
 			color: var(--text-primary);

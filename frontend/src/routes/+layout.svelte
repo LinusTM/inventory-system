@@ -55,6 +55,11 @@
 			--text-secondary: hsl(0, 0%, 0%);
 		}
 
+		--accent-primary: hsl(256, 34%, 48%);
+		--accent-secondary: hsl(342, 25%, 61%);
+		--accent-tertiary: hsl(123, 50%, 45%);
+		--accent-text: hsl(0, 0%, 100%);
+
 		--box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
 			0 2px 8px hsla(0, 0%, 0%, 0.05);
 	}

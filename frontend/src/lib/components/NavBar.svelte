@@ -48,7 +48,7 @@
 	}
 
 	p {
-		@media screen and (max-width: 512px) {
+		@media (max-width: 512px) {
 			display: none;
 		}
 

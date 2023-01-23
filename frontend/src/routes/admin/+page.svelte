@@ -9,7 +9,7 @@
 		<h2>Beskrivelse</h2>
 		<label for="ftz-number-input">FTZ nummer</label>
 		<input type="text" id="ftz-number-input" />
-		<label for="ftz-number-input">Alternativt navn</label>
+		<label for="alt-name-input">Alternativt navn</label>
 		<input type="text" id="alt-name-input" />
 		<label for="description-input">Beskrivelse af reservedel</label>
 		<textarea id="description-input" />
@@ -30,11 +30,11 @@
 	<div>
 		<h2>Placering</h2>
 		<label for="section-input">Sektion</label>
-		<input type="text" id="alt-name-input" />
-		<label for="name-input">Evt. sektion navn</label>
-		<input type="text" id="alt-name-input" />
+		<input type="text" id="section-input" />
+		<label for="section-name">Evt. sektion navn</label>
+		<input type="text" id="section-name" />
 		<label for="note-input">Note til placering</label>
-		<textarea id="description-input" />
+		<textarea id="note-input" />
 		<label for="amount-input">Mængde</label>
 		<input type="number" id="amount-input" min="0" />
 	</div>
@@ -64,42 +64,55 @@
 	}
 
 	input {
+		box-shadow: var(--box-shadow);
 		color: var(--text-primary);
-		border: none;
+		border: 2px solid var(--background-quaternary);
+		border-radius: 8px;
 		height: 2rem;
 		width: 9rem;
 		background-color: var(--background-secondary);
-		border-bottom: 2px solid var(--text-primary);
+		transition: background-color 0.2s ease, color 0.2s linear;
+
+		&:hover,
+		&:focus {
+			outline: none;
+			background-color: var(--background-quaternary);
+			color: var(--text-secondary);
+		}
 	}
 
 	button {
+		box-shadow: var(--box-shadow);
 		background-color: var(--background-secondary);
 		color: var(--text-primary);
-		transition: background-color 0.1s ease, color 0.1s linear;
-		border: none;
-		font-style: italic;
+		transition: background-color 0.2s ease, color 0.2s linear;
+		border: 2px solid var(--accent-tertiary);
+		border-radius: 10px;
 		font-weight: bold;
 		cursor: pointer;
 		padding: 1rem;
 
 		&:hover {
-			background-color: var(--background-tertiary);
-			color: var(--text-secondary);
+			background-color: var(--accent-tertiary);
+			color: var(--accent-text);
 		}
 	}
 
 	label[for='image-selector'] {
 		@extend button;
 		padding-block: 0.65rem;
+		border: 2px solid var(--background-quaternary);
+
+		&:hover {
+			background-color: var(--background-quaternary);
+			color: var(--text-secondary);
+		}
 	}
 
 	textarea {
-		border: none;
-		background-color: var(--background-secondary);
-		border-bottom: 2px solid var(--text-primary);
+		@extend input;
 		resize: none;
 		width: 16.5rem;
 		height: 8rem;
-		color: var(--text-primary);
 	}
 </style>
