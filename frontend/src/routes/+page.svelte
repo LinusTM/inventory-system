@@ -55,7 +55,7 @@
 		sort={false}
 	/>
 {:else}
-	<h1 class="header">No data in database</h1>
+	<h1>No data in database</h1>
 {/if}
 
 <style lang="scss">
@@ -110,19 +110,19 @@
 		background-color: var(--background-light);
 		color: var(--text-dark);
 		transition: background-color 0.1s ease, color 0.1s linear;
-	}
 
-	:global(.table-body > tr:nth-child(odd)) {
-		background-color: var(--background-secondary);
-		color: var(--text-dark);
-	}
+		&:nth-child(odd) {
+			background-color: var(--background-secondary);
+			color: var(--text-dark);
+		}
 
-	:global(.table-body > tr:hover) {
-		background-color: var(--background-quaternary);
-		color: var(--text-secondary);
-	}
+		&:hover {
+			background-color: var(--background-quaternary);
+			color: var(--text-secondary);
+		}
 
-	:global(.table-body > th) {
-		text-align: center;
+		& > th {
+			text-align: center;
+		}
 	}
 </style>

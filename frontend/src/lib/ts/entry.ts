@@ -20,6 +20,6 @@ export class Entry {
 		this.sectionName = faker.random.words(2);
 		this.placementNotes = faker.lorem.words(4);
 		this.amount = Math.floor(Math.random() * 500);
-		this.picture = faker.image.image(420, 420, true);
+		this.picture = faker.image.nature(420, 420, true);
 	}
 }

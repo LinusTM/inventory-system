@@ -99,19 +99,13 @@
 	main {
 		align-self: center;
 		margin: 4rem 0;
-		font-size: 1.1rem;
+		font-size: clamp(1rem, 2.5vw, 1.2rem);
 		line-height: 1.8;
 		flex: 1;
 		width: min(800px + 30%, 98%);
 
 		:global(h1:first-of-type) {
-			@media (min-width: 511px) {
-				font-size: 2.55rem;
-			}
-
-			@media (max-width: 512px) {
-				font-size: 2rem;
-			}
+			font-size: clamp(2.4rem, 3vw, 3rem);
 
 			text-align: center;
 			margin-bottom: 2rem;

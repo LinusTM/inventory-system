@@ -3,14 +3,17 @@
 
 	import { slide } from 'svelte/transition';
 
-	function checkValidity(file: any) {
-		if (file) {
-			if (file[0].size > 3145728) {
-				return 'error';
-			}
-			return 'success';
-		}
-		return null;
+	enum Result {
+		Success = 'success',
+		Error = 'error',
+		NoFile = '',
+	}
+
+	function checkValidity(file: FileList): Result {
+		if (!file) return Result.NoFile;
+		if (file[0].size > 3145728) return Result.Error;
+
+		return Result.Success;
 	}
 </script>
 
@@ -27,9 +30,9 @@
 		<textarea id="description-input" />
 		<label class={checkValidity(files)} for="image-selector">Tilføj billede</label>
 		<input type="file" accept="image/*" id="image-selector" bind:files hidden />
-		{#if checkValidity(files)}
+		{#if checkValidity(files) != Result.NoFile}
 			<p transition:slide>
-				{#if files[0].size > 3145728}
+				{#if checkValidity(files) == Result.Error}
 					File is too big. (Must be smaller than 3MB)
 				{:else}
 					{files[0].name.replace(/(.{12})..+/, '$1…')}
@@ -37,8 +40,8 @@
 			</p>
 		{/if}
 
-		{#if checkValidity(files) === 'error'}
-			<button type="button" class="disabled" disabled>Tilføj reservedel til inventar</button>
+		{#if checkValidity(files) == 'error'}
+			<button type="button" disabled>Tilføj reservedel til inventar</button>
 		{:else}
 			<button type="button">Tilføj reservedel til inventar</button>
 		{/if}
@@ -71,10 +74,6 @@
 		}
 	}
 
-	:not(h2) {
-		font-size: 1.1rem;
-	}
-
 	:not(label),
 	label[for='image-selector'] {
 		margin-bottom: 1.5rem;
@@ -99,8 +98,9 @@
 	}
 
 	button {
-		box-shadow: var(--box-shadow);
+		font-size: 1.1rem;
 		background-color: var(--background-secondary);
+		box-shadow: var(--box-shadow);
 		color: var(--text-primary);
 		transition: background-color 0.2s ease, color 0.2s linear;
 		border: 2px solid var(--accent-tertiary);
@@ -114,7 +114,7 @@
 			color: var(--accent-text);
 		}
 
-		&.disabled {
+		&[disabled] {
 			cursor: not-allowed;
 			border-color: var(--background-secondary);
 
@@ -143,6 +143,7 @@
 				color: var(--accent-text);
 			}
 		}
+
 		&.success {
 			border: 2px solid var(--accent-primary);
 

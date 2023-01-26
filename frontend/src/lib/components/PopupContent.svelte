@@ -8,19 +8,15 @@
 	FTZ nummer: <span>{data.ftzNumber}</span>
 </h2>
 
-<div id="container">
-	<div>
-		<p>altName: {data.altName}</p>
-		<p>altName: {data.altName}</p>
-		<p>description: {data.description}</p>
-		<p>section: {data.section}</p>
-	</div>
-	<div>
-		<p>sectionName: {data.sectionName}</p>
-		<p>placementNotes: {data.placementNotes}</p>
-		<p>amount: {data.amount}</p>
-		<p>picture: {data.picture}</p>
-	</div>
+<div>
+	<p>altName: <b>{data.altName}</b></p>
+	<p>altName: <b>{data.altName}</b></p>
+	<p>description: <b>{data.description}</b></p>
+	<p>section: <b>{data.section}</b></p>
+	<p>sectionName: <b>{data.sectionName}</b></p>
+	<p>placementNotes: <b>{data.placementNotes}</b></p>
+	<p>amount: <b>{data.amount}</b></p>
+	<img src={data.picture} alt={data.picture} />
 </div>
 
 <style lang="scss">
@@ -28,20 +24,19 @@
 		text-decoration: underline;
 	}
 
-	#container {
-		grid-template-columns: 2, 1fr;
+	div {
+		grid-template-columns: 1fr 1fr;
 		display: grid;
 		justify-items: left;
 		justify-content: stretch;
 		font-size: 1.05rem;
 		gap: 1rem;
+		margin-inline: 2em;
 		height: calc(200px + 30vh);
+		padding-bottom: 2rem;
+	}
 
-		div {
-			display: inline-flex;
-			flex-direction: column;
-			align-content: flex-start;
-			overflow: hidden;
-		}
+	img {
+		box-shadow: var(--box-shadow);
 	}
 </style>
