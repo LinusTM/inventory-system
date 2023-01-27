@@ -9,13 +9,19 @@
 </h2>
 
 <div>
-	<p>altName: <b>{data.altName}</b></p>
-	<p>altName: <b>{data.altName}</b></p>
-	<p>description: <b>{data.description}</b></p>
-	<p>section: <b>{data.section}</b></p>
-	<p>sectionName: <b>{data.sectionName}</b></p>
-	<p>placementNotes: <b>{data.placementNotes}</b></p>
-	<p>amount: <b>{data.amount}</b></p>
+	<label for="altName">altName: <input id="altName" placeholder={data.altName} /></label>
+	<label for="altName">altName: <input id="altName" placeholder={data.altName} /></label>
+	<label for="description"
+		>description: <input id="description" placeholder={data.description} /></label
+	>
+	<label for="section">section: <input id="section" placeholder={data.section} /></label>
+	<label for="sectionName"
+		>sectionName: <input id="sectionName" placeholder={data.sectionName} /></label
+	>
+	<label for="placementNotes"
+		>placementNotes: <input id="placementNotes" placeholder={data.placementNotes} /></label
+	>
+	<label>amount: <input placeholder={data.amount.toString()} /></label>
 	<img src={data.picture} alt={data.picture} />
 </div>
 
@@ -38,5 +44,10 @@
 
 	img {
 		box-shadow: var(--box-shadow);
+	}
+
+	label,
+	input {
+		display: block;
 	}
 </style>

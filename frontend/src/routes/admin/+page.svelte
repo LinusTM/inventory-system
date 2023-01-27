@@ -84,10 +84,11 @@
 		color: var(--text-primary);
 		border: 2px solid var(--background-quaternary);
 		border-radius: 8px;
-		height: 2rem;
-		width: 9rem;
 		background-color: var(--background-secondary);
 		transition: background-color 0.2s ease, color 0.2s linear;
+		font-size: clamp(1rem, 2.5vw, 1.2rem);
+		height: 2rem;
+		width: 9rem;
 
 		&:hover,
 		&:focus {
